@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { localeAlternates } from '@/lib/seo';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
@@ -16,7 +17,7 @@ export async function generateMetadata(props: {
   return {
     title: t('title'),
     description: t('subtitle'),
-    alternates: { canonical: `/${locale}/tools` },
+    alternates: localeAlternates(locale, '/tools'),
   };
 }
 

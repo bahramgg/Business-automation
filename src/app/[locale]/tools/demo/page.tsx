@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { localeAlternates } from '@/lib/seo';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Container } from '@/components/ui/container';
 import { ToolBlock } from '@/components/tools/tool-block';
@@ -14,7 +15,7 @@ export async function generateMetadata(props: {
     description: t('subtitle'),
     // Canonical for the demo tool (plan §3) — the compact copy on
     // /services/assistant defers to this page.
-    alternates: { canonical: `/${locale}/tools/demo` },
+    alternates: localeAlternates(locale, '/tools/demo'),
   };
 }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { localeAlternates } from '@/lib/seo';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Container } from '@/components/ui/container';
 import { ToolBlock } from '@/components/tools/tool-block';
@@ -19,7 +20,7 @@ export async function generateMetadata(props: {
     description: t('full.intro'),
     // Canonical points at this page so the compact copies on the home and
     // service pages don't create duplicate content (plan §3, §16).
-    alternates: { canonical: `/${locale}/tools/roi` },
+    alternates: localeAlternates(locale, '/tools/roi'),
   };
 }
 

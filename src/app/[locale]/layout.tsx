@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing, direction, isLocale, type Locale } from '@/i18n/routing';
 import { pickClientMessages } from '@/i18n/client-namespaces';
+import { siteUrl } from '@/lib/site';
 import { SiteHeader } from '@/components/layout/site-header';
 import { SiteFooter } from '@/components/layout/site-footer';
 import '@/styles/globals.css';
@@ -23,11 +24,31 @@ export async function generateMetadata(props: {
   );
 
   return {
-    title: t('title'),
+    // Absolute base so per-page canonicals and alternates resolve to real URLs
+    // in the emitted metadata (plan §14).
+    metadataBase: new URL(siteUrl),
+    title: {
+      default: t('title'),
+      template: `%s — AFA`,
+    },
     description: t('description'),
     alternates: {
       canonical: `/${locale}`,
       languages,
+    },
+    openGraph: {
+      type: 'website',
+      siteName: 'AFA',
+      locale: locale === 'fa' ? 'fa_IR' : 'en_US',
+      alternateLocale: locale === 'fa' ? 'en_US' : 'fa_IR',
+      title: t('title'),
+      description: t('description'),
+      url: `/${locale}`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
     },
   };
 }
@@ -46,10 +67,25 @@ export default async function LocaleLayout(props: {
   const typedLocale: Locale = locale;
   // Only client-used namespaces cross to the browser (plan §14).
   const messages = pickClientMessages(await getMessages());
+  const meta = await getTranslations({ locale, namespace: 'Meta' });
+  const orgDescription = meta('description');
 
   return (
     <html lang={typedLocale} dir={direction[typedLocale]} suppressHydrationWarning>
       <body>
+        {/* Organization schema (plan §14). Only facts we can stand behind. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'AFA',
+              url: `${siteUrl}/${typedLocale}`,
+              description: orgDescription,
+            }),
+          }}
+        />
         <NextIntlClientProvider messages={messages}>
           <a href="#main" className="sr-only focus:not-sr-only">
             Skip to content

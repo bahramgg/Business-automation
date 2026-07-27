@@ -18,6 +18,7 @@ export const clientNamespaces = [
   'Repeat', // repeat-calculator.tsx
   'Audit', // audit-scan.tsx
   'Scope', // scope-builder.tsx
+  'Contact', // lead-form.tsx
 ] as const;
 
 /** Narrow a full catalog down to the namespaces the client actually needs. */

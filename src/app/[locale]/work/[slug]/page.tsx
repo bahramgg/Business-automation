@@ -31,10 +31,19 @@ export async function generateMetadata(props: {
   const { locale, slug } = await props.params;
   const item = await getWorkCase(locale as Locale, slug);
   if (!item) return {};
+  // Only advertise the locales this case is actually translated into — an
+  // hreflang pointing at a 404 is worse than none (plan §6, §9).
+  const translated = await Promise.all(
+    routing.locales.map(async (l) => ({ l, has: (await getWorkCase(l, slug)) !== null })),
+  );
+  const languages = Object.fromEntries(
+    translated.filter((entry) => entry.has).map((entry) => [entry.l, `/${entry.l}/work/${slug}`]),
+  );
+
   return {
     title: item.title,
     description: item.summary,
-    alternates: { canonical: `/${locale}/work/${slug}` },
+    alternates: { canonical: `/${locale}/work/${slug}`, languages },
   };
 }
 

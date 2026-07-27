@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import type { ServiceSlug } from './services';
+import { localeAlternates } from './seo';
 
 // Per-service metadata (plan §9, §14: metadata per-route per-locale).
 export async function serviceMetadata(
@@ -11,6 +12,6 @@ export async function serviceMetadata(
   return {
     title: t('title'),
     description: t('oneLiner'),
-    alternates: { canonical: `/${locale}/services/${slug}` },
+    alternates: localeAlternates(locale, `/services/${slug}`),
   };
 }

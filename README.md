@@ -83,6 +83,29 @@ IPv4-mapped IPv6, internal TLDs, bare hostnames, non-http schemes, embedded
 credentials, and non-standard ports. The Worker fetches GET-only, does not
 follow redirects, times out fast, and caps how much it reads.
 
+## Lead intake (Cloudflare Worker + D1 + Telegram)
+
+The contact form validates locally and posts to a Worker that stores the lead in
+D1 and pings the admin on Telegram.
+
+```bash
+cd workers/lead-intake
+npx wrangler d1 create afa-leads                              # id → wrangler.toml
+npx wrangler d1 execute afa-leads --file=./schema.sql --remote
+npx wrangler kv namespace create LEAD_RATELIMIT               # id → wrangler.toml
+npx wrangler secret put TELEGRAM_BOT_TOKEN
+npx wrangler secret put TELEGRAM_CHAT_ID
+npx wrangler deploy
+# then: NEXT_PUBLIC_LEAD_ENDPOINT=https://afa-lead-intake.<subdomain>.workers.dev
+```
+
+Without the endpoint the form validates and then says plainly that it isn't
+connected — it never fakes a successful send. Anti-abuse is a honeypot, a
+fill-time check, and a per-IP daily cap; no CAPTCHA. Lead text is escaped before
+it reaches Telegram so a crafted name can't inject formatting or a fake link.
+
+Set `NEXT_PUBLIC_SITE_URL` for correct canonical, hreflang, OG, and sitemap URLs.
+
 ## Roadmap
 
 Built in phases (plan §16). **Phases 1–7 are done**: foundation, home, the

@@ -9,7 +9,7 @@
     "postbuild": "node scripts/check-client-bundle.mjs",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit && tsc --noEmit -p workers/demo-proxy && tsc --noEmit -p workers/audit-scan",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p workers/demo-proxy && tsc --noEmit -p workers/audit-scan && tsc --noEmit -p workers/lead-intake",
     "test": "vitest run",
     "test:watch": "vitest",
     "fonts:sync": "node scripts/sync-fonts.mjs"

@@ -608,6 +608,52 @@
       }
     }
   },
+  "Contact": {
+    "eyebrow": "Contact",
+    "title": "A short call, no commitment",
+    "subtitle": "Leave your number and we'll reach out to map the scope with you.",
+    "formTitle": "Contact form",
+    "fields": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your full name"
+      },
+      "phone": {
+        "label": "Mobile or WhatsApp",
+        "placeholder": "09121234567"
+      },
+      "sector": {
+        "label": "Sector"
+      },
+      "link": {
+        "label": "Site or profile link (optional)",
+        "placeholder": "instagram.com/yourshop"
+      }
+    },
+    "sectors": {
+      "retail": "Retail & apparel",
+      "restaurant": "Restaurant & café",
+      "salon": "Salon & beauty",
+      "services": "Technical services",
+      "other": "Other"
+    },
+    "sectorPlaceholder": "Choose one",
+    "submit": "Send",
+    "sending": "Sending…",
+    "successTitle": "Got it",
+    "successBody": "We'll be in touch shortly. Meanwhile you can assemble your scope in the configurator so the call moves faster.",
+    "successCta": "Package configurator",
+    "errors": {
+      "name": "Enter your name (at least two characters).",
+      "phone": "That mobile number isn't valid.",
+      "sector": "Pick a sector.",
+      "link": "That link isn't valid.",
+      "general": "Couldn't send. Try again in a moment.",
+      "rateLimited": "Too many submissions today. Please try again tomorrow."
+    },
+    "privacyNote": "Used only to contact you about this request. It goes nowhere else.",
+    "noEndpointNote": "The form isn't connected to a delivery service yet; use the routes below for now."
+  },
   "NotFound": {
     "title": "This page wasn't found",
     "body": "The link may be outdated or the address is wrong. Pick up from here.",
