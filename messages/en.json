@@ -29,6 +29,80 @@
     "ctaPrimary": "Get started",
     "ctaSecondary": "See the tools"
   },
+  "Problem": {
+    "eyebrow": "Where money leaks",
+    "title": "Three places sales slip through",
+    "cards": {
+      "unanswered": {
+        "title": "Unanswered messages",
+        "body": "DMs and messages land, then sit — late or never answered. The buyer doesn't wait; they move to the next seller."
+      },
+      "catalog": {
+        "title": "Invisible catalog",
+        "body": "Your products aren't anywhere a buyer can browse and order on the spot. Every extra click is one fewer sale."
+      },
+      "forgotten": {
+        "title": "Forgotten customers",
+        "body": "Someone who bought once is your likeliest next sale — but nothing brings them back."
+      }
+    }
+  },
+  "Services": {
+    "eyebrow": "Service map",
+    "title": "Three services, one sales system",
+    "subtitle": "Each service ships with its own live tool, so you test the claim with your own numbers on the spot.",
+    "toolPrefix": "Tool",
+    "linkLabel": "Learn more",
+    "cards": {
+      "website": {
+        "title": "Website & online store",
+        "body": "A site where a buyer sees the product, trusts it, and orders in seconds.",
+        "tool": "Online-presence scan"
+      },
+      "assistant": {
+        "title": "AI answering assistant",
+        "body": "An assistant that answers around the clock, quotes prices, and takes orders.",
+        "tool": "Live demo"
+      },
+      "automation": {
+        "title": "Operations & customer return",
+        "body": "Automatic reminders and follow-ups that bring past buyers back and build recurring revenue.",
+        "tool": "Repeat-customer calculator"
+      }
+    }
+  },
+  "Faq": {
+    "eyebrow": "FAQ",
+    "title": "Know this before the call",
+    "items": {
+      "prices": {
+        "q": "Why are there no prices on the site?",
+        "a": "Tools give you scope and timeline, not a number. Pricing is set in a short call, matched to your actual work."
+      },
+      "time": {
+        "q": "How long does it take?",
+        "a": "Work ships in phases. The first usable phase reaches you well before the full build and runs from day one."
+      },
+      "ownership": {
+        "q": "Who owns the code and access?",
+        "a": "You do — source, domain, hosting, and every key. Nothing stays locked to us."
+      },
+      "iran": {
+        "q": "Does it run reliably from Iran?",
+        "a": "Yes. Infrastructure, fonts, and tools are chosen to stay fast and reachable from Iran."
+      },
+      "assistant": {
+        "q": "Does the assistant actually answer?",
+        "a": "Yes — soon you'll talk to it directly on the assistant page and see for yourself."
+      }
+    }
+  },
+  "Cta": {
+    "title": "Ready to build your sales system?",
+    "subtitle": "One short call to map the scope and the first phase together.",
+    "primary": "Get started",
+    "secondary": "See services"
+  },
   "NotFound": {
     "title": "This page wasn't found",
     "body": "The link may be outdated or the address is wrong. Pick up from here.",

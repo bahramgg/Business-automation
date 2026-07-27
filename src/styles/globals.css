@@ -104,6 +104,15 @@
   .tnum {
     font-variant-numeric: tabular-nums;
   }
+  /* Faint brand halo used behind closing CTAs — colors stay in this layer,
+   * never hardcoded in components. */
+  .brand-halo {
+    background: radial-gradient(
+      40rem 12rem at 50% -4rem,
+      rgba(77, 105, 255, 0.28),
+      transparent 70%
+    );
+  }
 }
 
 /* Respect reduced motion globally (plan §2, §14). */
