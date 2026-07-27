@@ -15,8 +15,10 @@
     "fonts:sync": "node scripts/sync-fonts.mjs"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "next": "^15.5.22",
     "next-intl": "^3.26.3",
+    "next-mdx-remote": "^6.0.0",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },

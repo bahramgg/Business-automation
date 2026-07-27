@@ -8,3 +8,25 @@ export function formatNumber(value: number, locale: Locale): string {
     maximumFractionDigits: 0,
   }).format(value);
 }
+
+/**
+ * A year in the locale's digits — no thousands separator, so 1404 renders as
+ * ۱۴۰۴ rather than ۱٬۴۰۴.
+ */
+export function formatYear(value: number, locale: Locale): string {
+  return new Intl.NumberFormat(intlLocale[locale], {
+    useGrouping: false,
+    maximumFractionDigits: 0,
+  }).format(value);
+}
+
+/**
+ * Join a list with the separator the locale actually uses (Persian uses «،»,
+ * English uses a comma), instead of hardcoding one punctuation mark.
+ */
+export function formatList(items: string[], locale: Locale): string {
+  return new Intl.ListFormat(intlLocale[locale], {
+    style: 'narrow',
+    type: 'unit',
+  }).format(items);
+}

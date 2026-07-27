@@ -22,10 +22,15 @@ function newSessionId(): string {
   return globalThis.crypto?.randomUUID?.() ?? `s${Date.now()}${Math.random()}`;
 }
 
-export function LiveDemo() {
+export function LiveDemo({
+  initialVertical = 'clothing',
+}: {
+  /** Vertical to open on — a case study's artifact starts on its own sector. */
+  initialVertical?: VerticalId;
+} = {}) {
   const t = useTranslations('Demo');
   const locale = useLocale() as 'fa' | 'en';
-  const [vertical, setVertical] = useState<VerticalId>('clothing');
+  const [vertical, setVertical] = useState<VerticalId>(initialVertical);
   const [turns, setTurns] = useState<Turn[]>([]);
   const [draft, setDraft] = useState('');
   const [pending, setPending] = useState(false);

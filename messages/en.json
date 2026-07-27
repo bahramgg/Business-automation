@@ -155,15 +155,31 @@
     "title": "What does not answering cost you?",
     "subtitle": "Set four sliders and see how much you lose in sales each month — no sign-up.",
     "inputs": {
-      "messages": { "label": "Messages & DMs per month" },
-      "answered": { "label": "How many are actually answered?" },
-      "orderValue": { "label": "Average order value", "unit": "toman" },
-      "conversion": { "label": "Of each conversation, how many become a sale?" }
+      "messages": {
+        "label": "Messages & DMs per month"
+      },
+      "answered": {
+        "label": "How many are actually answered?"
+      },
+      "orderValue": {
+        "label": "Average order value",
+        "unit": "toman"
+      },
+      "conversion": {
+        "label": "Of each conversation, how many become a sale?"
+      }
     },
     "results": {
-      "lostSales": { "label": "Monthly lost sales (estimated)", "unit": "toman" },
-      "ordersLost": { "label": "Orders lost per month" },
-      "hoursFreed": { "label": "Hours freed per month" }
+      "lostSales": {
+        "label": "Monthly lost sales (estimated)",
+        "unit": "toman"
+      },
+      "ordersLost": {
+        "label": "Orders lost per month"
+      },
+      "hoursFreed": {
+        "label": "Hours freed per month"
+      }
     },
     "disclaimer": "This is an estimate from your own inputs, not a sales guarantee.",
     "copyLink": "Copy result link",
@@ -207,9 +223,18 @@
       "oneLiner": "A fast, mobile-first site and store that shows your product, builds trust, and takes the order on the spot.",
       "toolName": "Online-presence scan",
       "steps": {
-        "s1": { "title": "Structure & content", "body": "We lay out products, categories, and key pages so buyers never get lost." },
-        "s2": { "title": "Design & build", "body": "A fast, responsive theme in your identity — clean, no clutter, no extra effects." },
-        "s3": { "title": "Launch", "body": "Domain, hosting, and payment gateway in your name; the site ships ready to sell." }
+        "s1": {
+          "title": "Structure & content",
+          "body": "We lay out products, categories, and key pages so buyers never get lost."
+        },
+        "s2": {
+          "title": "Design & build",
+          "body": "A fast, responsive theme in your identity — clean, no clutter, no extra effects."
+        },
+        "s3": {
+          "title": "Launch",
+          "body": "Domain, hosting, and payment gateway in your name; the site ships ready to sell."
+        }
       },
       "deliverables": [
         "Full responsive website",
@@ -224,9 +249,18 @@
       "oneLiner": "An AI assistant on your site, Telegram, or WhatsApp that quotes prices, answers questions, and moves buyers to purchase.",
       "toolName": "Live demo",
       "steps": {
-        "s1": { "title": "Train", "body": "It learns your catalog and your most common customer questions." },
-        "s2": { "title": "Connect", "body": "It plugs into the channel where your customers already are." },
-        "s3": { "title": "Deliver", "body": "It answers around the clock and logs every lead for you." }
+        "s1": {
+          "title": "Train",
+          "body": "It learns your catalog and your most common customer questions."
+        },
+        "s2": {
+          "title": "Connect",
+          "body": "It plugs into the channel where your customers already are."
+        },
+        "s3": {
+          "title": "Deliver",
+          "body": "It answers around the clock and logs every lead for you."
+        }
       },
       "deliverables": [
         "Answering bot or widget on your channel",
@@ -241,9 +275,18 @@
       "oneLiner": "Automatic reminders and follow-ups that return past customers at the right moment and take repetitive work off your plate.",
       "toolName": "Repeat-customer calculator",
       "steps": {
-        "s1": { "title": "Customer base", "body": "We collect and organize past purchases so no customer slips away." },
-        "s2": { "title": "Rules", "body": "Reminder timing and message are defined per customer segment." },
-        "s3": { "title": "Run", "body": "The system follows up on its own and reports results on a schedule." }
+        "s1": {
+          "title": "Customer base",
+          "body": "We collect and organize past purchases so no customer slips away."
+        },
+        "s2": {
+          "title": "Rules",
+          "body": "Reminder timing and message are defined per customer segment."
+        },
+        "s3": {
+          "title": "Run",
+          "body": "The system follows up on its own and reports results on a schedule."
+        }
       },
       "deliverables": [
         "Unified customer database",
@@ -252,6 +295,23 @@
         "Connection to a messaging channel (SMS/Telegram/WhatsApp)"
       ]
     }
+  },
+  "WorkPage": {
+    "eyebrow": "Work",
+    "title": "Things we built that are running",
+    "subtitle": "Each case has a real problem, a thing that was built, and an artifact you can try right here.",
+    "empty": "No case studies published in this language yet.",
+    "confidentialLabel": "Confidential case",
+    "confidentialNote": "The client's name and logo are withheld at their request.",
+    "year": "Year",
+    "duration": "Duration",
+    "vertical": "Sector",
+    "stack": "Stack",
+    "modules": "Modules",
+    "resultsTitle": "Result",
+    "artifactTitle": "Try this case",
+    "backToWork": "Back to work",
+    "readCase": "Read the case"
   },
   "NotFound": {
     "title": "This page wasn't found",

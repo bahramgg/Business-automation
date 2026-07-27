@@ -1,0 +1,37 @@
+---
+slug: "naranj-restaurant"
+title: "Naranj Restaurant — phone orders became a system"
+vertical: "Restaurant"
+year: 2025
+duration: "6 weeks"
+summary: "Orders arrived by phone and DM and were written on paper. Now an assistant answers, sends the menu, and logs the order."
+stack: ["Next.js", "Telegram Bot", "Cloudflare Workers"]
+modules: ["Website", "Answering assistant", "Customer database"]
+confidential: false
+artifact:
+  type: "demo"
+  vertical: "restaurant"
+results:
+  - "Answering went from business hours to around the clock (qualitative)."
+  - "Orders land in a searchable database instead of on paper."
+  - "Menu and prices update in one place, not across three channels."
+---
+
+## The problem
+
+Orders came from three places: phone, Instagram DMs, and WhatsApp. During the
+rush nobody had time to reply, and messages sent after closing were effectively
+lost. The menu lived in three places and the prices disagreed.
+
+## What was built
+
+A lightweight site with an always-current menu, and an answering assistant on
+Telegram and a site widget. The assistant reads the menu and prices from that
+single source, handles the recurring questions — hours, delivery area, table
+reservations — and logs the order with its details. Orders land in a customer
+database at the same time.
+
+## Result
+
+Busy hours no longer drop messages, and late-night questions aren't unanswered
+by morning. The menu has one source of truth; a price change happens once.
