@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { ButtonLink } from '@/components/ui/button-link';
@@ -23,7 +24,14 @@ const steps = ['s1', 's2', 's3'] as const;
 // The fixed service-page template (plan §4). All three service pages render
 // through this component, so their rhythm is identical by construction:
 // overview → how it works → tool block → deliverables → related work + CTA.
-export function ServiceDetail({ slug }: { slug: ServiceSlug }) {
+export function ServiceDetail({
+  slug,
+  tool,
+}: {
+  slug: ServiceSlug;
+  /** This service's live tool. Falls back to the honest "coming" state. */
+  tool?: ReactNode;
+}) {
   const t = useTranslations(`Service.${slug}`);
   const c = useTranslations('ServiceCommon');
   const Icon = icons[slug];
@@ -101,7 +109,7 @@ export function ServiceDetail({ slug }: { slug: ServiceSlug }) {
       <section className="py-12">
         <Container>
           <ToolBlock fullHref={`/tools/${serviceToolSlug[slug]}`}>
-            <ToolComingSoon />
+            {tool ?? <ToolComingSoon />}
           </ToolBlock>
         </Container>
       </section>

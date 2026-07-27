@@ -103,6 +103,53 @@
     "primary": "Get started",
     "secondary": "See services"
   },
+  "Demo": {
+    "eyebrow": "Live demo",
+    "title": "Talk to the assistant yourself",
+    "subtitle": "Pick a business type and ask it anything — it answers from that business's sample catalog.",
+    "choosePrompt": "Pick a business type:",
+    "verticals": {
+      "clothing": "Clothing store",
+      "restaurant": "Restaurant",
+      "salon": "Salon",
+      "electronics": "Appliance store",
+      "services": "Technical services"
+    },
+    "empty": "Try a suggested question, or write your own.",
+    "typing": "Typing…",
+    "placeholder": "Ask a question…",
+    "send": "Send",
+    "limitReached": "You've reached this demo's message limit.",
+    "sessionCounter": "{used, number} of {max, number} messages this session",
+    "note": "This is a sample demo on a fictional catalog; the real one runs on yours.",
+    "suggestions": {
+      "clothing": {
+        "q1": "How much is the cotton coat?",
+        "q2": "Do you ship to other cities?",
+        "q3": "Can I exchange for another size?"
+      },
+      "restaurant": {
+        "q1": "How much is the koobideh plate?",
+        "q2": "What time are you open until?",
+        "q3": "Can you reserve a table for 8?"
+      },
+      "salon": {
+        "q1": "How much is a haircut?",
+        "q2": "Do you have an opening tomorrow?",
+        "q3": "What's the cancellation policy?"
+      },
+      "electronics": {
+        "q1": "How much is the vacuum cleaner?",
+        "q2": "Does it come with a warranty?",
+        "q3": "Do you offer cash on delivery?"
+      },
+      "services": {
+        "q1": "What does an inspection cost?",
+        "q2": "Can you send a technician today?",
+        "q3": "Is the work guaranteed?"
+      }
+    }
+  },
   "Roi": {
     "eyebrow": "Start here",
     "title": "What does not answering cost you?",

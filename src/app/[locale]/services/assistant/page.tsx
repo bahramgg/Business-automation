@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { ServiceDetail } from '@/components/sections/service-detail';
+import { LiveDemo } from '@/components/tools/live-demo';
 import { serviceMetadata } from '@/lib/service-meta';
 
 export async function generateMetadata(props: {
@@ -15,5 +16,5 @@ export default async function AssistantServicePage(props: {
 }) {
   const { locale } = await props.params;
   setRequestLocale(locale);
-  return <ServiceDetail slug="assistant" />;
+  return <ServiceDetail slug="assistant" tool={<LiveDemo />} />;
 }

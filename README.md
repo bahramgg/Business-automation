@@ -35,6 +35,36 @@ switch keeps you on the same page.
 | `npm test` | Vitest (routing, message-key parity, utils) |
 | `npm run fonts:sync` | Refresh self-hosted fonts from @fontsource |
 
+## Assistant demo (Cloudflare Worker)
+
+The live demo on `/services/assistant` and `/tools/demo` works **with no
+backend**: without a configured endpoint it answers from the scripted fallback
+in `src/lib/demo/fallback.ts`, so the page is never broken and never shows a
+service error.
+
+To connect the real model, deploy the proxy in `workers/demo-proxy`:
+
+```bash
+cd workers/demo-proxy
+npx wrangler kv namespace create DEMO_RATELIMIT   # paste the id into wrangler.toml
+npx wrangler secret put OPENROUTER_API_KEY        # secret — never committed
+npx wrangler deploy
+```
+
+Then point the site at it (the URL is public; the key is not):
+
+```bash
+# .env.local
+NEXT_PUBLIC_DEMO_ENDPOINT=https://afa-demo-proxy.<subdomain>.workers.dev
+```
+
+Safety rails, all enforced Worker-side: model key only in the Worker, per
+session (10) and per IP/hour (30) rate limits in KV, a response-token ceiling,
+untrusted user text fenced and never followed as instructions, and a global
+kill-switch (`DEMO_ENABLED=off`) that pushes every client back to the scripted
+fallback. `npm test` runs the injection suite; `npm run build` fails if any
+secret-shaped string reaches the client bundle.
+
 ## Roadmap
 
 Built in phases (plan §16). **Phase 1 (this commit): foundation** — project

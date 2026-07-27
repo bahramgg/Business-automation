@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/check-client-bundle.mjs",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p workers/demo-proxy",
     "test": "vitest run",
     "test:watch": "vitest",
     "fonts:sync": "node scripts/sync-fonts.mjs"
@@ -20,6 +21,7 @@
     "react-dom": "19.0.0"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260727.1",
     "@eslint/eslintrc": "^3.3.6",
     "@fontsource/inter": "^5.1.1",
     "@fontsource/manrope": "^5.1.1",

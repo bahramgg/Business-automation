@@ -1,0 +1,20 @@
+name = "afa-demo-proxy"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+# Secrets (NEVER in this file — set them with wrangler):
+#   npx wrangler secret put OPENROUTER_API_KEY
+#
+# KV namespace for rate-limit counters. Create it once, then paste the id:
+#   npx wrangler kv namespace create DEMO_RATELIMIT
+[[kv_namespaces]]
+binding = "DEMO_RATELIMIT"
+id = "replace-with-your-kv-namespace-id"
+
+[vars]
+# Origins allowed to call the Worker (first entry is the CORS default).
+ALLOWED_ORIGINS = "https://afa.example,http://localhost:3000"
+# Cheap model with a hard token ceiling applied in code.
+MODEL = "openai/gpt-4o-mini"
+# Global kill-switch: set to "off" to push every client into scripted fallback.
+DEMO_ENABLED = "on"
