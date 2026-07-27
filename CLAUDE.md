@@ -7,17 +7,18 @@ this file wins.
 
 ## What the site is
 
-An introduction, nothing more. One page, five sections, in this order:
+An introduction, nothing more. One page, six sections, in this order:
 
 1. **Hero** — what the service is, and two actions: book a call, or see the tool.
 2. **Service** — what we actually do, in four concrete things.
 3. **Benefits** — what changes for the business.
-4. **Impact tool** — the site's *only* tool. Four sliders from the visitor's own
+4. **Work** — three short before/after examples. No metrics we cannot source.
+5. **Impact tool** — the site's *only* tool. Four sliders from the visitor's own
    business → hours freed, working days returned, requests recovered. This is
    how a visitor understands what the service does for them.
-5. **Contact form** — at the end. Nothing earlier asks for details.
+6. **Contact form** — at the end. Nothing earlier asks for details.
 
-There are no other routes: no services pages, no tools index, no case studies,
+There are no other routes: no services pages, no tools index, no case-study pages,
 no terms/FAQ/deliverables pages. Don't add them back without being asked.
 
 ## Tone

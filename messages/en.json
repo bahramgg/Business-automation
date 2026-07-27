@@ -73,20 +73,71 @@
       }
     }
   },
+  "Work": {
+    "eyebrow": "Work",
+    "title": "What we've built for others",
+    "subtitle": "Three processes we automated that are running today.",
+    "labels": {
+      "before": "Before",
+      "after": "After"
+    },
+    "items": {
+      "restaurant": {
+        "sector": "Restaurant",
+        "title": "Orders arriving through three separate channels",
+        "before": "Orders came by phone, Instagram, and WhatsApp and were written on paper; during the rush, messages went unanswered.",
+        "after": "Response and order capture are automated, and every order's status is traceable by the kitchen and the till in one view.",
+        "scope": "Automated response · Order capture · Weekly reporting"
+      },
+      "retail": {
+        "sector": "Clothing store",
+        "title": "Sales running entirely through DMs",
+        "before": "Every order took several messages back and forth, and no customer record survived the sale.",
+        "after": "Catalog and payment moved online, recurring questions are answered automatically, and purchases land in a customer database.",
+        "scope": "Online store · Automated response · Customer database"
+      },
+      "services": {
+        "sector": "Technical services",
+        "title": "Dispatch coordinated by hand",
+        "before": "Requests were taken by phone and scheduled in a notebook; follow-ups were forgotten.",
+        "after": "Requests are captured and scheduled automatically, with reminders sent to both the customer and the technician.",
+        "scope": "Request capture · Scheduling · Automated reminders"
+      }
+    },
+    "note": "Some names are withheld at the client's request."
+  },
   "Impact": {
     "eyebrow": "What this does for you",
     "title": "See exactly what you get back",
     "subtitle": "Set four numbers to your own business to see an estimate of the result.",
     "inputs": {
-      "staff": { "label": "How many people do repetitive work?", "unit": "people" },
-      "hours": { "label": "Hours per person per day", "unit": "hours" },
-      "requests": { "label": "Requests or orders received per month", "unit": "requests" },
-      "missed": { "label": "What share goes unanswered or unfollowed?" }
+      "staff": {
+        "label": "How many people do repetitive work?",
+        "unit": "people"
+      },
+      "hours": {
+        "label": "Hours per person per day",
+        "unit": "hours"
+      },
+      "requests": {
+        "label": "Requests or orders received per month",
+        "unit": "requests"
+      },
+      "missed": {
+        "label": "What share goes unanswered or unfollowed?"
+      }
     },
     "results": {
-      "hours": { "label": "Working hours freed per month", "unit": "hours" },
-      "workdays": { "label": "Working days returned to the team" },
-      "requests": { "label": "Requests recovered per month" }
+      "hours": {
+        "label": "Working hours freed per month",
+        "unit": "hours"
+      },
+      "workdays": {
+        "label": "Working days returned to the team"
+      },
+      "requests": {
+        "label": "Requests recovered per month"
+      }
     },
     "disclaimer": "This is an estimate from your own inputs, not a delivery commitment. It assumes roughly 60% of repetitive work is automatable and roughly 70% of missed requests are recoverable; the real figures follow a review of your processes.",
     "ctaTitle": "What are these numbers for your business?",
@@ -99,10 +150,21 @@
     "subtitle": "Leave your number and we'll be in touch to talk through your processes.",
     "formTitle": "Contact form",
     "fields": {
-      "name": { "label": "Name", "placeholder": "Your full name" },
-      "phone": { "label": "Mobile or WhatsApp", "placeholder": "09121234567" },
-      "sector": { "label": "Sector" },
-      "link": { "label": "Site or profile link (optional)", "placeholder": "instagram.com/yourshop" }
+      "name": {
+        "label": "Name",
+        "placeholder": "Your full name"
+      },
+      "phone": {
+        "label": "Mobile or WhatsApp",
+        "placeholder": "09121234567"
+      },
+      "sector": {
+        "label": "Sector"
+      },
+      "link": {
+        "label": "Site or profile link (optional)",
+        "placeholder": "instagram.com/yourshop"
+      }
     },
     "sectors": {
       "retail": "Retail & apparel",
