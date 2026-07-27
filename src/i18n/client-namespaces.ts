@@ -14,6 +14,7 @@ export const clientNamespaces = [
   'LocaleSwitch', // locale-switch.tsx
   'Demo', // live-demo.tsx
   'Roi', // roi-calculator.tsx
+  'Timeline', // timeline.tsx
 ] as const;
 
 /** Narrow a full catalog down to the namespaces the client actually needs. */

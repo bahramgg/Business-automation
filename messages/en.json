@@ -313,6 +313,138 @@
     "backToWork": "Back to work",
     "readCase": "Read the case"
   },
+  "Timeline": {
+    "eyebrow": "How it runs",
+    "title": "First call to handover, in three phases",
+    "subtitle": "Each phase ships something usable. You don't wait for the whole project to see results.",
+    "phaseLabel": "Phase",
+    "deliverableLabel": "Phase output",
+    "phases": {
+      "p1": {
+        "name": "Discovery & scope",
+        "duration": "1–2 weeks",
+        "summary": "We map where your customers come from, where they drop off, and which leak to close first.",
+        "steps": [
+          "Session on the business and its current sales path",
+          "Review of channels, catalog, and response times",
+          "Scope definition and phase order"
+        ],
+        "deliverable": "A scope and timeline document, no ambiguity"
+      },
+      "p2": {
+        "name": "Build phase one",
+        "duration": "3–6 weeks",
+        "summary": "The first usable piece gets built and shipped — the one with the most impact.",
+        "steps": [
+          "Design and build in your identity",
+          "Two defined revision rounds",
+          "Testing against real business data"
+        ],
+        "deliverable": "A live, working system — not a demo"
+      },
+      "p3": {
+        "name": "Handover & support",
+        "duration": "Ongoing",
+        "summary": "Everything transfers into your name and the bug-fix warranty period starts.",
+        "steps": [
+          "Domain, hosting, and keys transferred to you",
+          "Training and written guide",
+          "Bug-fix warranty and a direct support channel"
+        ],
+        "deliverable": "Full ownership + documentation + support"
+      }
+    }
+  },
+  "Deliverables": {
+    "eyebrow": "Deliverables",
+    "title": "Exactly what you get",
+    "subtitle": "No overclaiming, no hidden line items. Every row is something that actually reaches you.",
+    "note": "Per-project specifics live in the scope document; this list is the framework.",
+    "groups": {
+      "product": {
+        "title": "Product",
+        "items": [
+          "Full responsive website",
+          "Telegram bot or web answering widget",
+          "Simple admin panel"
+        ]
+      },
+      "data": {
+        "title": "Data",
+        "items": [
+          "Customer database",
+          "Product catalog",
+          "Periodic reports"
+        ]
+      },
+      "ownership": {
+        "title": "Ownership",
+        "items": [
+          "Complete source code",
+          "Domain and hosting in your name",
+          "Every key and credential under your organization"
+        ]
+      },
+      "docs": {
+        "title": "Documentation",
+        "items": [
+          "Written guide",
+          "Short training video",
+          "Per-phase handover doc"
+        ]
+      },
+      "support": {
+        "title": "Support",
+        "items": [
+          "Bug-fix warranty period",
+          "Direct support channel"
+        ]
+      }
+    }
+  },
+  "Terms": {
+    "eyebrow": "Terms",
+    "title": "The framework, before we start",
+    "banner": "This page is a framework, not a contract; each project gets its own signed agreement.",
+    "sections": {
+      "start": {
+        "title": "How we start",
+        "body": "We start with a short call and write the scope. Work begins once both sides agree on that document."
+      },
+      "phases": {
+        "title": "Phasing and staged delivery",
+        "body": "Work ships in defined phases, each with its own usable output. Payment is tied to those same phases."
+      },
+      "revisions": {
+        "title": "Revisions",
+        "body": "Each phase includes two revision rounds. Further rounds or a scope change are estimated as a new phase."
+      },
+      "clientDuties": {
+        "title": "What we need from you",
+        "body": "Content and images, access to your current channels, and one person who can make decisions. Delays on these three move the timeline."
+      },
+      "ip": {
+        "title": "IP and code ownership",
+        "body": "Source, domain, hosting, and every key belong to your organization. No part of the system stays locked to us."
+      },
+      "confidentiality": {
+        "title": "Confidentiality",
+        "body": "Your business and customer data stay confidential. If you'd rather not be named in our work, the case is published anonymously or not at all."
+      },
+      "thirdParty": {
+        "title": "Third-party running costs",
+        "body": "Servers, domains, AI models, and SMS carry running costs. These are separate from the build fee and the accounts are opened in your name."
+      },
+      "support": {
+        "title": "Support scope",
+        "body": "Fixing what we built is free during the warranty period. New features, content changes, and work on other systems are not support and are estimated separately."
+      },
+      "stop": {
+        "title": "Stopping or withdrawing",
+        "body": "Either side can stop between phases. Work completed to that point is settled and handed over; nothing is held hostage."
+      }
+    }
+  },
   "NotFound": {
     "title": "This page wasn't found",
     "body": "The link may be outdated or the address is wrong. Pick up from here.",

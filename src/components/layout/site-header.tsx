@@ -24,7 +24,17 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-3 z-50 px-3">
-      <Container className="max-w-6xl px-0">
+      {/* Scrim: the glass pill only blurs what's directly behind it, so content
+       * scrolling past in the gaps above and beside it collided with the nav.
+       * This fades the page out behind the whole header band. Painted first, so
+       * the pill stays on top without needing a z-index. */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 -top-3 block h-24 bg-gradient-to-b from-bg-950 via-bg-950/85 to-transparent"
+      />
+      {/* `relative` matters: the scrim is positioned, so without it the scrim
+       * would paint over the pill instead of behind it. */}
+      <Container className="relative max-w-6xl px-0">
         <div className="glass mx-auto flex items-center justify-between gap-4 rounded-pill py-2 pe-2 ps-4">
           <Logo label={t('home')} />
 

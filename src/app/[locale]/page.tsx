@@ -3,11 +3,12 @@ import { Hero } from '@/components/sections/hero';
 import { Problem } from '@/components/sections/problem';
 import { StartTool } from '@/components/sections/start-tool';
 import { ServicesMap } from '@/components/sections/services-map';
+import { Timeline } from '@/components/sections/timeline';
 import { Faq } from '@/components/sections/faq';
 import { FinalCta } from '@/components/sections/final-cta';
 
 // Home (plan §4): hero → problem → start tool (the one tool on home) →
-// services map → FAQ → closing CTA.
+// services map → timeline → FAQ → closing CTA.
 export default async function HomePage(props: {
   params: Promise<{ locale: string }>;
 }) {
@@ -20,6 +21,7 @@ export default async function HomePage(props: {
       <Problem />
       <StartTool />
       <ServicesMap />
+      <Timeline />
       <Faq />
       <FinalCta />
     </>

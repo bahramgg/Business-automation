@@ -10,6 +10,17 @@ export function formatNumber(value: number, locale: Locale): string {
 }
 
 /**
+ * A zero-padded index in the locale's digits (01, 02 … / ۰۱، ۰۲ …), for
+ * numbered lists that should not fall back to Latin digits under fa.
+ */
+export function formatIndex(value: number, locale: Locale): string {
+  return new Intl.NumberFormat(intlLocale[locale], {
+    minimumIntegerDigits: 2,
+    useGrouping: false,
+  }).format(value);
+}
+
+/**
  * A year in the locale's digits — no thousands separator, so 1404 renders as
  * ۱۴۰۴ rather than ۱٬۴۰۴.
  */
