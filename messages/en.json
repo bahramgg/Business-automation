@@ -1,0 +1,52 @@
+{
+  "Meta": {
+    "title": "AFA — A sales system for your business",
+    "description": "Websites and AI assistants that actually close sales. AFA builds sales systems, not just websites."
+  },
+  "Nav": {
+    "services": "Services",
+    "tools": "Tools",
+    "work": "Work",
+    "terms": "Terms",
+    "cta": "Get started",
+    "home": "Home",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "LocaleSwitch": {
+    "label": "Language",
+    "fa": "فارسی",
+    "en": "English",
+    "switchTo": "Switch to {locale}"
+  },
+  "Home": {
+    "statusActive": "System live",
+    "liveSignal": "messages answered automatically today",
+    "heroLine1": "Websites and AI assistants",
+    "heroLine2": "that actually close sales",
+    "subtitle": "A site and an assistant that answer, follow up, and close for you — even at 2 a.m.",
+    "ctaPrimary": "Get started",
+    "ctaSecondary": "See the tools"
+  },
+  "NotFound": {
+    "title": "This page wasn't found",
+    "body": "The link may be outdated or the address is wrong. Pick up from here.",
+    "home": "Back to home"
+  },
+  "Footer": {
+    "tagline": "We build sales systems for real businesses.",
+    "colProduct": "Product",
+    "colExplore": "Explore",
+    "colFramework": "Framework",
+    "servicesLink": "Services",
+    "toolsLink": "Tools",
+    "workLink": "Work",
+    "deliverablesLink": "Deliverables",
+    "termsLink": "Terms",
+    "faqLink": "FAQ",
+    "contactLink": "Contact",
+    "rights": "© {year} AFA. All rights reserved.",
+    "note": "No prices on the site — scope and timeline here, pricing in the call."
+  }
+}

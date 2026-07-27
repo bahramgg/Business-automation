@@ -1,0 +1,119 @@
+@import 'tailwindcss';
+@import './tokens.css';
+@import './fonts.css';
+
+/* Map design tokens into Tailwind v4's theme so utilities (bg-bg-950,
+ * text-ink, border-glass, rounded-card, shadow-brand, font-fa …) resolve to
+ * the single source of truth in tokens.css. */
+@theme inline {
+  --color-bg-950: var(--bg-950);
+  --color-bg-900: var(--bg-900);
+  --color-bg-850: var(--bg-850);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-border-glass: var(--border-glass);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-dim: var(--dim);
+  --color-blue: var(--blue);
+  --color-violet: var(--violet);
+  --color-lilac: var(--lilac);
+  --color-success: var(--success);
+
+  --radius-pill: var(--radius-pill);
+  --radius-card: var(--radius-card);
+  --radius-button: var(--radius-button);
+  --radius-field: var(--radius-field);
+
+  --shadow-brand: var(--shadow-brand);
+
+  --font-fa: var(--font-fa);
+  --font-en-head: var(--font-en-head);
+  --font-en-body: var(--font-en-body);
+}
+
+/* Base page: deep navy with a very faint violet radial halo at the top and a
+ * 2% SVG noise layer. The page gradient never gets more colorful (plan §2). */
+@layer base {
+  html {
+    background-color: var(--bg-950);
+    color-scheme: dark;
+  }
+
+  body {
+    min-height: 100dvh;
+    color: var(--ink);
+    background-color: var(--bg-950);
+    background-image:
+      radial-gradient(
+        60rem 40rem at 50% -10rem,
+        rgba(145, 109, 255, 0.14),
+        transparent 60%
+      );
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Per-locale font (plan §9). Switched by <html lang>, no inline styles. */
+  html[lang='fa'] body {
+    font-family: var(--font-fa);
+  }
+  html[lang='en'] body {
+    font-family: var(--font-en-body);
+  }
+  html[lang='en'] h1,
+  html[lang='en'] h2,
+  html[lang='en'] h3 {
+    font-family: var(--font-en-head);
+  }
+
+  /* Visible keyboard focus everywhere (plan §14 a11y). */
+  :focus-visible {
+    outline: 2px solid var(--lilac);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: rgba(77, 105, 255, 0.35);
+    color: var(--ink);
+  }
+}
+
+@layer utilities {
+  /* The single brand gradient, as a fill and as a text clip. */
+  .bg-brand {
+    background-image: var(--grad-brand);
+  }
+  /* Gradient text — used on exactly ONE key phrase per page (plan §2). */
+  .text-gradient {
+    background-image: var(--grad-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  /* Glass surface — floating header + tool cards only. */
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--border-glass);
+  }
+  /* Numbers in tools use tabular figures (plan §2). */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Respect reduced motion globally (plan §2, §14). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
