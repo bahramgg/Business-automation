@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { ServiceDetail } from '@/components/sections/service-detail';
+import { RepeatCalculator } from '@/components/tools/repeat-calculator';
 import { serviceMetadata } from '@/lib/service-meta';
 
 export async function generateMetadata(props: {
@@ -15,5 +16,5 @@ export default async function AutomationServicePage(props: {
 }) {
   const { locale } = await props.params;
   setRequestLocale(locale);
-  return <ServiceDetail slug="automation" />;
+  return <ServiceDetail slug="automation" tool={<RepeatCalculator />} />;
 }

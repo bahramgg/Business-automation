@@ -445,6 +445,169 @@
       }
     }
   },
+  "Repeat": {
+    "eyebrow": "This service's tool",
+    "title": "How much revenue is sitting in your past customers?",
+    "subtitle": "Use your own numbers to see what automatic reminders bring back each month.",
+    "inputs": {
+      "customers": {
+        "label": "Customers to date"
+      },
+      "purchase": {
+        "label": "Average purchase amount",
+        "unit": "toman"
+      },
+      "interval": {
+        "label": "How often would they naturally rebuy?",
+        "value": "{months, number} months"
+      },
+      "returning": {
+        "label": "What share actually come back today?"
+      }
+    },
+    "results": {
+      "recoverable": {
+        "label": "Recoverable monthly revenue (estimated)",
+        "unit": "toman"
+      },
+      "forgotten": {
+        "label": "Customers forgotten right now"
+      },
+      "multiple": {
+        "label": "Cost to win a new customer vs. bring one back (estimated)",
+        "value": "~{times, number}×"
+      }
+    },
+    "disclaimer": "This is an estimate from your own inputs, not a sales guarantee. The achievable return rate is deliberately conservative.",
+    "copyLink": "Copy result link",
+    "copied": "Copied",
+    "full": {
+      "title": "Repeat-customer calculator",
+      "intro": "Your biggest revenue source is someone who already bought. See how much of it is left on the table.",
+      "methodTitle": "Method & assumptions",
+      "methodBody": "Recoverable revenue = customers due to rebuy this month × achievable lift in return rate × average purchase.",
+      "assumptions": [
+        "Customers due each month = total customers ÷ rebuy interval.",
+        "The achievable lift is held at a conservative 15 percentage points and never pushes the return rate past 100%.",
+        "The acquisition-cost ratio is a rounded approximation, not a figure quoted from a specific published source."
+      ]
+    }
+  },
+  "Audit": {
+    "eyebrow": "This service's tool",
+    "title": "What's your online presence out of 100?",
+    "subtitle": "Add your site URL (optional) and answer five short questions to get a score and three quick wins.",
+    "urlLabel": "Site URL (optional)",
+    "urlHint": "Leave it empty if you have no site; the score is then based on your answers alone.",
+    "questionsLabel": "Five short questions:",
+    "questions": {
+      "hasOnlineCatalog": "Do you have an online product catalog?",
+      "hasOnlinePayment": "Do you accept online payment?",
+      "hasCustomerDatabase": "Do you keep a customer database?",
+      "replySpeed": "How long does your first reply usually take?",
+      "salesChannel": "Where do most sales come from?"
+    },
+    "replyOptions": {
+      "minutes": "Minutes",
+      "hours": "Hours",
+      "day-plus": "A day or more"
+    },
+    "channelOptions": {
+      "website": "Website",
+      "social": "Social",
+      "phone": "Phone",
+      "in-person": "In person"
+    },
+    "submit": "Show my score",
+    "scanning": "Checking…",
+    "scoreLabel": "Online presence score",
+    "scoreOutOf": "out of 100",
+    "winsTitle": "Quickest wins:",
+    "noWins": "Nothing major is missing — the fundamentals are in place.",
+    "wins": {
+      "site": "Build a real site; this is the biggest gap.",
+      "catalog": "Put the catalog online so buyers can see without asking.",
+      "payment": "Add online payment so purchases don't stall halfway.",
+      "reply": "Cut first-reply time — an automatic assistant solves exactly this.",
+      "database": "Build a customer database so you can bring people back.",
+      "mobile": "Fix the site on mobile; that's where most visits come from.",
+      "contact": "Make the contact route obvious on the site."
+    },
+    "disclaimer": "This score is an estimate from your answers and a surface-level page check, not a full audit.",
+    "questionnaireOnlyNote": "This score is based on your answers only; no site was checked.",
+    "instagramNote": "Instagram pages aren't checked (automated access isn't possible) — we only ask about them.",
+    "urlErrors": {
+      "invalid": "That address isn't valid.",
+      "scheme": "Only http and https addresses are checked.",
+      "private-host": "Internal and local addresses aren't checked.",
+      "has-credentials": "The address must not contain a username or password.",
+      "non-standard-port": "Only standard web ports are checked."
+    }
+  },
+  "Scope": {
+    "eyebrow": "Wrap up",
+    "title": "Build your own scope",
+    "subtitle": "Pick the modules to see the phasing and prerequisites, and arrive at the call ready.",
+    "modulesLabel": "What do you need?",
+    "modules": {
+      "store": "Online store",
+      "assistant": "Answering assistant",
+      "orderByMessage": "Order by message",
+      "campaign": "Reminder campaigns",
+      "loyalty": "Loyalty club",
+      "booking": "Appointment booking",
+      "woocommerce": "WooCommerce integration"
+    },
+    "autoAdded": "prerequisite",
+    "urgencyLabel": "How urgent is it?",
+    "urgencies": {
+      "relaxed": "No rush",
+      "normal": "Normal",
+      "urgent": "Urgent"
+    },
+    "emptyState": "Pick at least one module to see the phasing.",
+    "summaryTitle": "Suggested scope",
+    "totalWeeks": "About {weeks, number} weeks",
+    "phaseLabel": "Phase {n}",
+    "phaseWeeks": "About {weeks, number} weeks",
+    "dependencyNote": "Added as prerequisites: {modules}",
+    "prerequisitesTitle": "What we need from you",
+    "prerequisites": {
+      "catalog": "Product or service catalog with prices",
+      "customerList": "A list of past customers, in whatever form it exists",
+      "channel": "Access to the channel your customers already use"
+    },
+    "noPriceNote": "This is scope and timing only. Pricing is set in the call, against this exact scope.",
+    "downloadPdf": "Download PDF"
+  },
+  "ToolsPage": {
+    "eyebrow": "Tools",
+    "title": "Tools that answer with your own numbers",
+    "subtitle": "Each tool belongs to one service. This is just the list; each service explains itself on its own page.",
+    "openTool": "Open",
+    "items": {
+      "roi": {
+        "name": "Lost-sales calculator",
+        "line": "See what not answering costs you each month."
+      },
+      "demo": {
+        "name": "Live assistant demo",
+        "line": "Talk to the assistant yourself and judge the answers."
+      },
+      "audit": {
+        "name": "Online-presence scan",
+        "line": "A 0–100 score for your online presence, with three quick wins."
+      },
+      "repeat": {
+        "name": "Repeat-customer calculator",
+        "line": "See what bringing past customers back is worth."
+      },
+      "scope": {
+        "name": "Package configurator",
+        "line": "Assemble your scope and see how it phases."
+      }
+    }
+  },
   "NotFound": {
     "title": "This page wasn't found",
     "body": "The link may be outdated or the address is wrong. Pick up from here.",

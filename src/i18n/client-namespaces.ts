@@ -15,6 +15,9 @@ export const clientNamespaces = [
   'Demo', // live-demo.tsx
   'Roi', // roi-calculator.tsx
   'Timeline', // timeline.tsx
+  'Repeat', // repeat-calculator.tsx
+  'Audit', // audit-scan.tsx
+  'Scope', // scope-builder.tsx
 ] as const;
 
 /** Narrow a full catalog down to the namespaces the client actually needs. */

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { ServiceDetail } from '@/components/sections/service-detail';
+import { AuditScan } from '@/components/tools/audit-scan';
 import { serviceMetadata } from '@/lib/service-meta';
 
 export async function generateMetadata(props: {
@@ -15,5 +16,5 @@ export default async function WebsiteServicePage(props: {
 }) {
   const { locale } = await props.params;
   setRequestLocale(locale);
-  return <ServiceDetail slug="website" />;
+  return <ServiceDetail slug="website" tool={<AuditScan />} />;
 }

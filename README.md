@@ -65,9 +65,28 @@ kill-switch (`DEMO_ENABLED=off`) that pushes every client back to the scripted
 fallback. `npm test` runs the injection suite; `npm run build` fails if any
 secret-shaped string reaches the client bundle.
 
+## Online-presence scan (Cloudflare Worker)
+
+The scan on `/services/website` and `/tools/audit` scores the questionnaire with
+no backend; adding a site URL enriches it with page signals via a second Worker.
+
+```bash
+cd workers/audit-scan
+npx wrangler kv namespace create SCAN_RATELIMIT   # paste the id into wrangler.toml
+npx wrangler deploy
+# then: NEXT_PUBLIC_SCAN_ENDPOINT=https://afa-audit-scan.<subdomain>.workers.dev
+```
+
+Anti-SSRF is enforced in `src/lib/audit/scan.ts` and covered by 25 rejection
+tests: loopback, private and link-local ranges (including cloud metadata),
+IPv4-mapped IPv6, internal TLDs, bare hostnames, non-http schemes, embedded
+credentials, and non-standard ports. The Worker fetches GET-only, does not
+follow redirects, times out fast, and caps how much it reads.
+
 ## Roadmap
 
-Built in phases (plan §16). **Phase 1 (this commit): foundation** — project
-skeleton, design tokens, self-hosted fonts, bilingual layout, glass header +
-dark footer + language switch, home hero. Next: Phase 2 (full home), 2.5
-(service page template), 3 (ROI calculator), 4 (live assistant demo), …
+Built in phases (plan §16). **Phases 1–7 are done**: foundation, home, the
+service-page template and tool block, all five interactive tools (lost-sales
+and repeat-customer calculators, live assistant demo, online-presence scan,
+package configurator), case studies, deliverables and terms. Remaining: phase 8
+(lead forms + D1 + Telegram + SEO/sitemap) and phase 9 (final polish).

@@ -1,0 +1,14 @@
+name = "afa-audit-scan"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+# KV for per-IP scan limits:
+#   npx wrangler kv namespace create SCAN_RATELIMIT
+[[kv_namespaces]]
+binding = "SCAN_RATELIMIT"
+id = "replace-with-your-kv-namespace-id"
+
+[vars]
+ALLOWED_ORIGINS = "https://afa.example,http://localhost:3000"
+# Kill-switch: "off" makes every client fall back to questionnaire-only scoring.
+SCAN_ENABLED = "on"

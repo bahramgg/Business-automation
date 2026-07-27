@@ -6,7 +6,9 @@ export type ServiceSlug = (typeof serviceSlugs)[number];
 export const serviceToolSlug: Record<ServiceSlug, string> = {
   website: 'audit',
   assistant: 'demo',
-  automation: 'roi',
+  // The repeat-customer calculator is the ROI calculator's sibling (plan §5.5),
+  // on its own route so no page renders two tools at once.
+  automation: 'repeat',
 };
 
 export function isServiceSlug(value: string): value is ServiceSlug {

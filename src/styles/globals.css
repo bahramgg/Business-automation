@@ -133,3 +133,48 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Print / "Download PDF" for the scope configurator (plan §5.4). The PDF is
+ * this page rendered to paper — no PDF library ships to the browser. Chrome
+ * and Safari need color-adjust to keep the dark surfaces. */
+@media print {
+  @page {
+    margin: 16mm;
+  }
+  html,
+  body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  /* Chrome hides site chrome; keep only the scope summary readable. */
+  header,
+  footer,
+  nav,
+  .print\:hidden {
+    display: none !important;
+  }
+  main {
+    padding: 0 !important;
+  }
+  /* Flatten the dark glass surfaces so ink stays legible on paper. */
+  .glass,
+  [class*='bg-surface'],
+  [class*='bg-bg-'] {
+    background: #fff !important;
+    backdrop-filter: none !important;
+    border-color: #ccc !important;
+  }
+  [class*='text-ink'],
+  [class*='text-muted'],
+  [class*='text-dim'] {
+    color: #111 !important;
+  }
+  .text-gradient {
+    -webkit-text-fill-color: #111 !important;
+    color: #111 !important;
+    background: none !important;
+  }
+  a[href]::after {
+    content: '';
+  }
+}
