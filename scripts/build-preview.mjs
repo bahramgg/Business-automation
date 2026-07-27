@@ -4,9 +4,8 @@
 // self-hosted fonts as data URIs so the file works with no network at all
 // (the Artifact CSP blocks every external host). Next's own scripts are
 // stripped — they can't run standalone — and replaced with a small vanilla
-// shim for the page switcher and timeline tabs. The calculators are not
-// reimplemented here — each domain has its own maths, and a shim would show
-// numbers that do not match the real site.
+// shim for the locale switcher. The calculator is not reimplemented here — a
+// shim would risk showing numbers that do not match the real site.
 //
 // Usage: node scripts/build-preview.mjs <origin> <out.html>
 
@@ -19,18 +18,8 @@ const origin = process.argv[2] ?? 'http://localhost:3271';
 const outPath = process.argv[3] ?? resolve(root, 'preview.html');
 
 const PAGES = [
-  { id: 'home', label: 'خانه', path: '/fa' },
-  { id: 'domains', label: 'حوزه‌ها', path: '/fa/services' },
-  { id: 'acquisition', label: 'جذب', path: '/fa/services/acquisition' },
-  { id: 'sales', label: 'فروش', path: '/fa/services/sales' },
-  { id: 'operations', label: 'عملیات', path: '/fa/services/operations' },
-  { id: 'data', label: 'داده', path: '/fa/services/data' },
-  { id: 'readiness', label: 'ارزیابی', path: '/fa/tools/readiness' },
-  { id: 'scope', label: 'پیکربند', path: '/fa/tools/scope' },
-  { id: 'work', label: 'نمونه‌کار', path: '/fa/work' },
-  { id: 'case', label: 'یک کیس', path: '/fa/work/naranj-restaurant' },
-  { id: 'terms', label: 'شرایط', path: '/fa/terms' },
-  { id: 'en', label: 'EN', path: '/en' },
+  { id: 'fa', label: 'فارسی', path: '/fa' },
+  { id: 'en', label: 'English', path: '/en' },
 ];
 
 const FONTS = [
@@ -118,7 +107,7 @@ ${css}
 <nav class="pv-bar" aria-label="صفحه‌های پیش‌نمایش">
   <span class="pv-label">AFA preview</span>
   ${switcher}
-  <p class="pv-note">پیش‌نمایش ثابت طراحی و محتوا. جابه‌جایی صفحه و تب‌های تایم‌لاین کار می‌کنند؛ ماشین‌حساب‌ها و ارزیابی فقط در سایت زنده محاسبه می‌شوند.</p>
+  <p class="pv-note">پیش‌نمایش ثابت طراحی و محتوا. ماشین‌حساب فقط در سایت زنده محاسبه می‌کند.</p>
 </nav>
 <div class="pv-shell">
 ${sections.join('\n')}
@@ -136,21 +125,9 @@ ${sections.join('\n')}
     window.scrollTo(0, 0);
   }
   tabs.forEach(function (t) { t.addEventListener('click', function () { show(t.dataset.target); }); });
-  show('home');
+  // Show whichever page is first, whatever it is called.
+  if (tabs.length) show(tabs[0].dataset.target);
 
-  // --- timeline tabs (the real component's markup, re-driven) --------------
-  document.querySelectorAll('[role="tablist"]').forEach(function (list) {
-    var tabEls = list.querySelectorAll('[role="tab"]');
-    tabEls.forEach(function (tab) {
-      tab.addEventListener('click', function () {
-        var root = list.closest('section') || document;
-        tabEls.forEach(function (t) { t.setAttribute('aria-selected', String(t === tab)); });
-        root.querySelectorAll('[role="tabpanel"]').forEach(function (panel) {
-          panel.hidden = panel.id !== tab.getAttribute('aria-controls');
-        });
-      });
-    });
-  });
 
 })();
 </script>

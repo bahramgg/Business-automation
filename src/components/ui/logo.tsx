@@ -1,12 +1,10 @@
-import { Link } from '@/i18n/navigation';
-
 // AFA wordmark — echoes the "AFA.CO" lockup in the reference, with the accent
 // dot picked out in the brand violet. Kept as text (no image) for crispness
 // and instant paint.
 export function Logo({ label }: { label: string }) {
   return (
-    <Link
-      href="/"
+    <a
+      href="#top"
       aria-label={label}
       className="group inline-flex items-center gap-2 text-lg font-extrabold tracking-tight text-ink"
     >
@@ -19,6 +17,6 @@ export function Logo({ label }: { label: string }) {
       <span>
         AFA<span className="text-violet">.</span>
       </span>
-    </Link>
+    </a>
   );
 }

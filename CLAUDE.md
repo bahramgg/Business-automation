@@ -1,29 +1,24 @@
 # CLAUDE.md — AFA site
 
-Bilingual (fa/en) site for **AFA**, which automates a business as a system.
-The product plan lives in `docs/afa-services-site-plan-fa.md`; where this file
-and the plan disagree, this file wins — the positioning was revised after the
-plan was written.
+Bilingual (fa/en) **single-page introduction site** for AFA, which automates
+repetitive business processes. `docs/afa-services-site-plan-fa.md` is the
+original plan and is now largely superseded — where it and this file disagree,
+this file wins.
 
-## Positioning (revised)
+## What the site is
 
-AFA sells **business-system automation across four domains**, not a sales
-assistant. Sales is one domain of four. Never write copy that reduces the offer
-to answering messages.
+An introduction, nothing more. One page, five sections, in this order:
 
-| # | Domain | Route | Its tool |
-|---|---|---|---|
-| 01 | جذب / Acquisition | `/services/acquisition` | online-presence scan |
-| 02 | فروش و پاسخ‌گویی / Sales & response | `/services/sales` | lost-sales calculator (live demo linked, not embedded) |
-| 03 | عملیات / Operations | `/services/operations` | repetitive-work calculator |
-| 04 | داده و گزارش / Data & reporting | `/services/data` | repeat-customer calculator |
+1. **Hero** — what the service is, and two actions: book a call, or see the tool.
+2. **Service** — what we actually do, in four concrete things.
+3. **Benefits** — what changes for the business.
+4. **Impact tool** — the site's *only* tool. Four sliders from the visitor's own
+   business → hours freed, working days returned, requests recovered. This is
+   how a visitor understands what the service does for them.
+5. **Contact form** — at the end. Nothing earlier asks for details.
 
-Entry tool: **automation-readiness assessment** (`/tools/readiness`, and on the
-home page). Its output is a routing decision — one named domain to start from.
-Closing tool: **scope configurator** (`/tools/scope`).
-
-The visitor's path is stated once, up front: **assess → measure that domain →
-scope**. One domain = one page = one tool; a page never shows two tools.
+There are no other routes: no services pages, no tools index, no case studies,
+no terms/FAQ/deliverables pages. Don't add them back without being asked.
 
 ## Tone
 
@@ -33,9 +28,9 @@ Formal Persian, second-person plural («شما», «کنید»). No colloquialis
 ## Design
 
 Minimal and quiet. The brand gradient is reserved for the primary action —
-no gradient headlines. Prefer type hierarchy, generous spacing, and hairline
-borders over cards-with-glow. No scroll-reveal animation: it left below-fold
-sections invisible in print and full-page captures.
+no gradient headlines, no icon cards, no glow. Type hierarchy, generous
+spacing, and hairline borders carry the page. No scroll-reveal animation: it
+left below-fold sections invisible in print and full-page captures.
 
 ## Non-negotiable rules
 

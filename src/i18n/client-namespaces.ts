@@ -12,16 +12,8 @@ import type { AbstractIntlMessages } from 'next-intl';
 export const clientNamespaces = [
   'Nav', // site-header.tsx
   'LocaleSwitch', // locale-switch.tsx
-  'Demo', // live-demo.tsx
-  'Roi', // roi-calculator.tsx
-  'Timeline', // timeline.tsx
-  'Repeat', // repeat-calculator.tsx
-  'Audit', // audit-scan.tsx
-  'Scope', // scope-builder.tsx
+  'Impact', // impact-calculator.tsx
   'Contact', // lead-form.tsx
-  'Readiness', // readiness-check.tsx
-  'Domains', // readiness-check.tsx (domain names in the result)
-  'Workload', // workload-calculator.tsx
 ] as const;
 
 /** Narrow a full catalog down to the namespaces the client actually needs. */

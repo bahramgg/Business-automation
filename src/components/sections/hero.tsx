@@ -1,33 +1,36 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
-import { ButtonLink } from '@/components/ui/button-link';
+import { cn } from '@/lib/cn';
 
-// Home hero. Deliberately restrained: left-aligned, one weight of type, and no
-// gradient headline — the accent is spent on the single primary action instead,
-// so the eye lands on the one thing a first visitor should do.
+// The site opens by saying what the service is, then offers exactly two moves:
+// book a call, or scroll to the tool that shows what it's worth.
 export function Hero() {
-  const t = useTranslations('Home');
+  const t = useTranslations('Hero');
+
+  const anchor =
+    'inline-flex items-center justify-center rounded-button px-5 py-3 text-sm font-semibold transition-colors';
 
   return (
-    <section className="pb-14 pt-20 sm:pb-20 sm:pt-28">
+    <section className="pb-16 pt-20 sm:pb-24 sm:pt-28">
       <Container>
         <div className="max-w-3xl">
           <h1 className="text-[clamp(2rem,5vw,3.5rem)] font-semibold leading-[1.1] tracking-tight text-ink">
             <span className="block">{t('heroLine1')}</span>
             <span className="block text-muted">{t('heroLine2')}</span>
           </h1>
-
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
             {t('subtitle')}
           </p>
-
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href="/tools/readiness" className="w-full sm:w-auto">
+            <a href="#contact" className={cn(anchor, 'bg-brand text-white')}>
               {t('ctaPrimary')}
-            </ButtonLink>
-            <ButtonLink href="/services" variant="ghost" className="w-full sm:w-auto">
+            </a>
+            <a
+              href="#impact"
+              className={cn(anchor, 'border border-border text-ink hover:border-border-glass')}
+            >
               {t('ctaSecondary')}
-            </ButtonLink>
+            </a>
           </div>
         </div>
       </Container>

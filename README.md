@@ -1,9 +1,10 @@
-# AFA — services site
+# AFA — introduction site
 
-Bilingual (Persian/English) marketing + interactive-tools site for **AFA**, a
-sales-system builder. Deep-navy design language shared with `afa-pay`.
+Bilingual (Persian/English) single-page introduction site for **AFA**, which
+automates repetitive business processes. Deep-navy design language shared with
+`afa-pay`.
 
-> Full product plan: [`docs/afa-services-site-plan-fa.md`](docs/afa-services-site-plan-fa.md)
+> Original plan (largely superseded): [`docs/afa-services-site-plan-fa.md`](docs/afa-services-site-plan-fa.md)
 > Agent working rules: [`CLAUDE.md`](CLAUDE.md)
 
 ## Stack
@@ -43,58 +44,9 @@ npm run build && npm run start          # in one shell
 npm run preview:html http://localhost:3000 preview.html
 ```
 
-Renders eight real pages, inlines the stylesheet and the self-hosted fonts as
-data URIs, and drops Next's runtime for a small shim that keeps the page
-switcher, timeline tabs, and ROI sliders live. The result opens offline in any
+Renders the page in both locales, inlines the stylesheet and the self-hosted
+fonts as data URIs, and drops Next's runtime. The result opens offline in any
 browser — useful for sharing the design before there's a deployment.
-
-## Assistant demo (Cloudflare Worker)
-
-The live demo on `/services/assistant` and `/tools/demo` works **with no
-backend**: without a configured endpoint it answers from the scripted fallback
-in `src/lib/demo/fallback.ts`, so the page is never broken and never shows a
-service error.
-
-To connect the real model, deploy the proxy in `workers/demo-proxy`:
-
-```bash
-cd workers/demo-proxy
-npx wrangler kv namespace create DEMO_RATELIMIT   # paste the id into wrangler.toml
-npx wrangler secret put OPENROUTER_API_KEY        # secret — never committed
-npx wrangler deploy
-```
-
-Then point the site at it (the URL is public; the key is not):
-
-```bash
-# .env.local
-NEXT_PUBLIC_DEMO_ENDPOINT=https://afa-demo-proxy.<subdomain>.workers.dev
-```
-
-Safety rails, all enforced Worker-side: model key only in the Worker, per
-session (10) and per IP/hour (30) rate limits in KV, a response-token ceiling,
-untrusted user text fenced and never followed as instructions, and a global
-kill-switch (`DEMO_ENABLED=off`) that pushes every client back to the scripted
-fallback. `npm test` runs the injection suite; `npm run build` fails if any
-secret-shaped string reaches the client bundle.
-
-## Online-presence scan (Cloudflare Worker)
-
-The scan on `/services/website` and `/tools/audit` scores the questionnaire with
-no backend; adding a site URL enriches it with page signals via a second Worker.
-
-```bash
-cd workers/audit-scan
-npx wrangler kv namespace create SCAN_RATELIMIT   # paste the id into wrangler.toml
-npx wrangler deploy
-# then: NEXT_PUBLIC_SCAN_ENDPOINT=https://afa-audit-scan.<subdomain>.workers.dev
-```
-
-Anti-SSRF is enforced in `src/lib/audit/scan.ts` and covered by 25 rejection
-tests: loopback, private and link-local ranges (including cloud metadata),
-IPv4-mapped IPv6, internal TLDs, bare hostnames, non-http schemes, embedded
-credentials, and non-standard ports. The Worker fetches GET-only, does not
-follow redirects, times out fast, and caps how much it reads.
 
 ## Lead intake (Cloudflare Worker + D1 + Telegram)
 
@@ -119,13 +71,8 @@ it reaches Telegram so a crafted name can't inject formatting or a fake link.
 
 Set `NEXT_PUBLIC_SITE_URL` for correct canonical, hreflang, OG, and sitemap URLs.
 
-## Roadmap
+## Scope
 
-All nine phases from plan §16 are built: foundation, home, the service-page
-template and tool block, all five interactive tools, case studies, deliverables
-and terms, lead capture with D1 + Telegram, SEO, and final polish.
-
-What still needs a real deployment to verify: the Cloudflare Workers (assistant
-demo, site scan, lead intake) have never run against live infrastructure from
-here — the site works without them by design, but the model, D1, and Telegram
-paths are unexercised. Lighthouse has not been run.
+A single introduction page per locale: what the service is, what changes,
+one tool that estimates the result from the visitor's own numbers, and the
+contact form. The lead-intake Worker is the only backend.

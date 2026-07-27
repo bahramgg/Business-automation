@@ -2,7 +2,6 @@
 
 import { useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
 import { sectors, validateLead, type LeadFieldError } from '@/lib/lead';
 import { cn } from '@/lib/cn';
 
@@ -90,12 +89,6 @@ export function LeadForm() {
         <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-muted">
           {t('successBody')}
         </p>
-        <Link
-          href="/tools/scope"
-          className="mt-6 inline-flex rounded-button bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-brand"
-        >
-          {t('successCta')}
-        </Link>
       </div>
     );
   }
