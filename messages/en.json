@@ -103,6 +103,36 @@
     "primary": "Get started",
     "secondary": "See services"
   },
+  "Roi": {
+    "eyebrow": "Start here",
+    "title": "What does not answering cost you?",
+    "subtitle": "Set four sliders and see how much you lose in sales each month — no sign-up.",
+    "inputs": {
+      "messages": { "label": "Messages & DMs per month" },
+      "answered": { "label": "How many are actually answered?" },
+      "orderValue": { "label": "Average order value", "unit": "toman" },
+      "conversion": { "label": "Of each conversation, how many become a sale?" }
+    },
+    "results": {
+      "lostSales": { "label": "Monthly lost sales (estimated)", "unit": "toman" },
+      "ordersLost": { "label": "Orders lost per month" },
+      "hoursFreed": { "label": "Hours freed per month" }
+    },
+    "disclaimer": "This is an estimate from your own inputs, not a sales guarantee.",
+    "copyLink": "Copy result link",
+    "copied": "Copied",
+    "full": {
+      "title": "Lost-sales calculator",
+      "intro": "See what manual replies cost, using your own numbers. The result updates live and the link is shareable.",
+      "methodTitle": "Method & assumptions",
+      "methodBody": "Lost sales = unanswered messages × sale conversion rate × average order value.",
+      "assumptions": [
+        "Unanswered messages = total messages × (1 minus the answered share).",
+        "Freed hours assume an average of 3 minutes per message.",
+        "These figures are estimates and don't replace your real business data."
+      ]
+    }
+  },
   "ServicesPage": {
     "eyebrow": "Services",
     "title": "Three services that add up to one sales system",

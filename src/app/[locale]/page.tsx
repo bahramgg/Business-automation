@@ -1,13 +1,13 @@
 import { setRequestLocale } from 'next-intl/server';
 import { Hero } from '@/components/sections/hero';
 import { Problem } from '@/components/sections/problem';
+import { StartTool } from '@/components/sections/start-tool';
 import { ServicesMap } from '@/components/sections/services-map';
 import { Faq } from '@/components/sections/faq';
 import { FinalCta } from '@/components/sections/final-cta';
 
-// Home (plan §4). Phase 2 adds the problem cards, the services map, a short
-// FAQ, and the closing CTA. The start tool (ROI calculator) is intentionally
-// absent until Phase 3 — one tool on home, and not yet.
+// Home (plan §4): hero → problem → start tool (the one tool on home) →
+// services map → FAQ → closing CTA.
 export default async function HomePage(props: {
   params: Promise<{ locale: string }>;
 }) {
@@ -18,6 +18,7 @@ export default async function HomePage(props: {
     <>
       <Hero />
       <Problem />
+      <StartTool />
       <ServicesMap />
       <Faq />
       <FinalCta />

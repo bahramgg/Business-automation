@@ -104,6 +104,13 @@
   .tnum {
     font-variant-numeric: tabular-nums;
   }
+  /* Range slider — brand accent from tokens, comfortable hit target. Colors
+   * live here, never hardcoded in components. */
+  .range-brand {
+    accent-color: var(--blue);
+    height: 1.5rem;
+    cursor: pointer;
+  }
   /* Faint brand halo used behind closing CTAs — colors stay in this layer,
    * never hardcoded in components. */
   .brand-halo {
