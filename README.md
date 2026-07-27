@@ -108,8 +108,11 @@ Set `NEXT_PUBLIC_SITE_URL` for correct canonical, hreflang, OG, and sitemap URLs
 
 ## Roadmap
 
-Built in phases (plan §16). **Phases 1–7 are done**: foundation, home, the
-service-page template and tool block, all five interactive tools (lost-sales
-and repeat-customer calculators, live assistant demo, online-presence scan,
-package configurator), case studies, deliverables and terms. Remaining: phase 8
-(lead forms + D1 + Telegram + SEO/sitemap) and phase 9 (final polish).
+All nine phases from plan §16 are built: foundation, home, the service-page
+template and tool block, all five interactive tools, case studies, deliverables
+and terms, lead capture with D1 + Telegram, SEO, and final polish.
+
+What still needs a real deployment to verify: the Cloudflare Workers (assistant
+demo, site scan, lead intake) have never run against live infrastructure from
+here — the site works without them by design, but the model, D1, and Telegram
+paths are unexercised. Lighthouse has not been run.

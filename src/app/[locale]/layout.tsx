@@ -72,6 +72,17 @@ export default async function LocaleLayout(props: {
 
   return (
     <html lang={typedLocale} dir={direction[typedLocale]} suppressHydrationWarning>
+      <head>
+        {/* Preload only the weight the LCP heading uses, for the active locale
+         * — the rest load on demand via font-display: swap (plan §14). */}
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href={typedLocale === 'fa' ? '/fonts/vazirmatn-800.woff2' : '/fonts/manrope-800.woff2'}
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         {/* Organization schema (plan §14). Only facts we can stand behind. */}
         <script

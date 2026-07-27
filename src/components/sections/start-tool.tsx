@@ -2,7 +2,12 @@ import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { ToolBlock } from '@/components/tools/tool-block';
-import { RoiCalculator } from '@/components/tools/roi-calculator';
+import dynamic from 'next/dynamic';
+
+// Split out of the initial bundle — the tool sits below the fold (plan §14).
+const RoiCalculator = dynamic(() =>
+  import('@/components/tools/roi-calculator').then((m) => m.RoiCalculator),
+);
 
 // The one tool on the home page (plan §4.3): the lost-sales calculator in its
 // compact role, inside the standard tool block. The full version + assumptions

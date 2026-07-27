@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { ServiceDetail } from '@/components/sections/service-detail';
-import { LiveDemo } from '@/components/tools/live-demo';
+import dynamic from 'next/dynamic';
+
+const LiveDemo = dynamic(() =>
+  import('@/components/tools/live-demo').then((m) => m.LiveDemo),
+);
 import { serviceMetadata } from '@/lib/service-meta';
 
 export async function generateMetadata(props: {

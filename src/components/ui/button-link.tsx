@@ -4,8 +4,11 @@ import { cn } from '@/lib/cn';
 
 type Variant = 'primary' | 'ghost';
 
+// No `focus-visible:outline-none` here: suppressing it removed the global focus
+// ring and left keyboard users with no indicator on the primary CTAs. The
+// site-wide :focus-visible outline in globals.css applies instead.
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-button px-5 py-3 text-sm font-semibold transition-[transform,box-shadow,background-color] duration-200 will-change-transform hover:-translate-y-0.5 focus-visible:outline-none';
+  'inline-flex items-center justify-center gap-2 rounded-button px-5 py-3 text-sm font-semibold transition-[transform,box-shadow,background-color] duration-200 will-change-transform hover:-translate-y-0.5';
 
 const variants: Record<Variant, string> = {
   // Primary = brand gradient + glow (plan §2).

@@ -187,7 +187,7 @@ export function LiveDemo({
           placeholder={limitReached ? t('limitReached') : t('placeholder')}
           aria-label={t('placeholder')}
           maxLength={500}
-          className="min-w-0 flex-1 rounded-field border border-border bg-surface px-4 py-2.5 text-sm text-ink placeholder:text-dim focus:border-border-glass focus:outline-none disabled:opacity-60"
+          className="min-w-0 flex-1 rounded-field border border-border bg-surface px-4 py-2.5 text-sm text-ink placeholder:text-dim focus:border-border-glass disabled:opacity-60"
         />
         <button
           type="submit"

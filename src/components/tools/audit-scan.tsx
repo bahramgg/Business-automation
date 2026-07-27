@@ -95,7 +95,7 @@ export function AuditScan() {
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           placeholder="example.com"
-          className="mt-2 w-full rounded-field border border-border bg-surface px-4 py-2.5 text-sm text-ink placeholder:text-dim focus:border-border-glass focus:outline-none"
+          className="mt-2 w-full rounded-field border border-border bg-surface px-4 py-2.5 text-sm text-ink placeholder:text-dim focus:border-border-glass"
         />
         {urlError ? (
           <p role="alert" className="mt-2 text-xs text-lilac">

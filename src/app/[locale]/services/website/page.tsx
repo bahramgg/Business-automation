@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { ServiceDetail } from '@/components/sections/service-detail';
-import { AuditScan } from '@/components/tools/audit-scan';
+import dynamic from 'next/dynamic';
+
+const AuditScan = dynamic(() =>
+  import('@/components/tools/audit-scan').then((m) => m.AuditScan),
+);
 import { serviceMetadata } from '@/lib/service-meta';
 
 export async function generateMetadata(props: {

@@ -102,7 +102,7 @@ export function LeadForm() {
 
   const inputClass = (invalid: boolean) =>
     cn(
-      'mt-2 w-full rounded-field border bg-surface px-4 py-2.5 text-sm text-ink placeholder:text-dim focus:outline-none',
+      'mt-2 w-full rounded-field border bg-surface px-4 py-2.5 text-sm text-ink placeholder:text-dim',
       invalid ? 'border-lilac' : 'border-border focus:border-border-glass',
     );
 
