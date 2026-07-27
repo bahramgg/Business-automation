@@ -27,6 +27,8 @@ const PAGES = [
   { id: 'data', label: 'داده', path: '/fa/services/data' },
   { id: 'readiness', label: 'ارزیابی', path: '/fa/tools/readiness' },
   { id: 'scope', label: 'پیکربند', path: '/fa/tools/scope' },
+  { id: 'work', label: 'نمونه‌کار', path: '/fa/work' },
+  { id: 'case', label: 'یک کیس', path: '/fa/work/naranj-restaurant' },
   { id: 'terms', label: 'شرایط', path: '/fa/terms' },
   { id: 'en', label: 'EN', path: '/en' },
 ];
