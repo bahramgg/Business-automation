@@ -8,6 +8,7 @@ import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import matter from 'gray-matter';
 import type { Locale } from '@/i18n/routing';
+import { isDomainId, type DomainId } from './domains';
 
 export interface WorkFrontmatter {
   slug: string;
@@ -21,8 +22,17 @@ export interface WorkFrontmatter {
   modules: string[];
   /** When true the client's name/logo is hidden and the case is anonymized. */
   confidential: boolean;
+  /**
+   * Which automation domains this case covered. Case studies are proof of the
+   * four-domain offer, so each one names the domains it actually touched.
+   */
+  domains: DomainId[];
   /** Optional interactive artifact to render (plan §6: every case has one). */
-  artifact?: { type: 'demo'; vertical: string } | { type: 'roi' };
+  artifact?:
+    | { type: 'demo'; vertical: string }
+    | { type: 'roi' }
+    | { type: 'workload' }
+    | { type: 'repeat' };
   /** Measurable outcome lines. Qualitative when there's no sourced number. */
   results?: string[];
 }
@@ -70,6 +80,7 @@ function parseCase(fileName: string, raw: string): WorkCase | null {
     stack: asStringArray(data.stack),
     modules: asStringArray(data.modules),
     confidential: data.confidential === true,
+    domains: asStringArray(data.domains).filter(isDomainId),
     artifact,
     results: asStringArray(data.results),
     body: content,

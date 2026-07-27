@@ -10,6 +10,8 @@ import { IconArrow } from '@/components/ui/icons';
 import { ToolBlock } from '@/components/tools/tool-block';
 import { LiveDemo } from '@/components/tools/live-demo';
 import { RoiCalculator } from '@/components/tools/roi-calculator';
+import { RepeatCalculator } from '@/components/tools/repeat-calculator';
+import { WorkloadCalculator } from '@/components/tools/workload-calculator';
 import { getWorkCase, getWorkCases } from '@/lib/work';
 import { formatList, formatYear } from '@/lib/format';
 import { routing, type Locale } from '@/i18n/routing';
@@ -75,6 +77,7 @@ export default async function WorkCasePage(props: {
 
   const t = await getTranslations({ locale, namespace: 'WorkPage' });
   const tc = await getTranslations({ locale, namespace: 'Cta' });
+  const td = await getTranslations({ locale, namespace: 'Domains' });
   const typedLocale = locale as Locale;
 
   return (
@@ -98,6 +101,15 @@ export default async function WorkCasePage(props: {
                 {t('confidentialLabel')}
               </span>
             ) : null}
+            {/* The domains this case covered — proof of the four-domain offer. */}
+            {item.domains.map((id) => (
+              <span
+                key={id}
+                className="rounded-pill border border-border px-3 py-1 text-xs text-muted"
+              >
+                {td(`cards.${id}.title`)}
+              </span>
+            ))}
           </div>
 
           <h1 className="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
@@ -166,9 +178,7 @@ export default async function WorkCasePage(props: {
             {t('artifactTitle')}
           </h2>
           <div className="mt-6">
-            <ToolBlock
-              fullHref={item.artifact.type === 'demo' ? '/tools/demo' : '/tools/roi'}
-            >
+            <ToolBlock fullHref={`/tools/${item.artifact.type}`}>
               {item.artifact.type === 'demo' ? (
                 // The artifact opens on this case's own sector (plan §6).
                 <LiveDemo
@@ -178,6 +188,10 @@ export default async function WorkCasePage(props: {
                       : undefined
                   }
                 />
+              ) : item.artifact.type === 'repeat' ? (
+                <RepeatCalculator />
+              ) : item.artifact.type === 'workload' ? (
+                <WorkloadCalculator />
               ) : (
                 <RoiCalculator />
               )}

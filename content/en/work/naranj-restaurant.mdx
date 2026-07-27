@@ -1,37 +1,52 @@
 ---
 slug: "naranj-restaurant"
-title: "Naranj Restaurant — phone orders became a system"
+title: "Naranj Restaurant — from manual orders to a traceable process"
 vertical: "Restaurant"
 year: 2025
 duration: "6 weeks"
-summary: "Orders arrived by phone and DM and were written on paper. Now an assistant answers, sends the menu, and logs the order."
+summary: "Orders arrived through three separate channels and were written on paper. Response is now automated, every order has a traceable status, and the weekly report is produced without manual work."
 stack: ["Next.js", "Telegram Bot", "Cloudflare Workers"]
-modules: ["Website", "Answering assistant", "Customer database"]
+modules: ["Site & online menu", "Automated response", "Order tracking", "Customer database"]
+domains: ["acquisition", "sales", "operations", "data"]
 confidential: false
 artifact:
   type: "demo"
   vertical: "restaurant"
 results:
-  - "Answering went from business hours to around the clock (qualitative)."
-  - "Orders land in a searchable database instead of on paper."
-  - "Menu and prices update in one place, not across three channels."
+  - "Response moved from business hours to around the clock (qualitative)."
+  - "Order status is traceable in a single view instead of on paper."
+  - "Menu and prices have one source; a change is made once."
+  - "The weekly sales report is produced without manual work."
 ---
 
 ## The problem
 
-Orders came from three places: phone, Instagram DMs, and WhatsApp. During the
-rush nobody had time to reply, and messages sent after closing were effectively
-lost. The menu lived in three places and the prices disagreed.
+Orders came in through three separate routes: phone, Instagram DMs, and
+WhatsApp. During the rush there was no time to reply, and messages sent after
+closing were effectively lost. The menu was maintained in three places and the
+prices disagreed. Nobody had a complete picture of a night's orders, and
+reporting meant counting paper tickets by hand.
+
+This wasn't a sales problem. It was an absence of process, and it touched all
+four domains.
 
 ## What was built
 
-A lightweight site with an always-current menu, and an answering assistant on
-Telegram and a site widget. The assistant reads the menu and prices from that
-single source, handles the recurring questions — hours, delivery area, table
-reservations — and logs the order with its details. Orders land in a customer
-database at the same time.
+**Acquisition.** A lightweight site with an always-current menu, so a new
+customer sees prices without asking and the route to an order is obvious.
+
+**Sales & response.** Automated response on Telegram and a site widget, reading
+the menu and prices from that single source, handling the recurring questions,
+and recording orders with their details.
+
+**Operations.** Every order carries an explicit status — received, preparing,
+sent — and the kitchen and the till both see the same view.
+
+**Data & reporting.** Orders land in the customer database at the same time, and
+weekly sales and top items are compiled automatically.
 
 ## Result
 
 Busy hours no longer drop messages, and late-night questions aren't unanswered
-by morning. The menu has one source of truth; a price change happens once.
+by morning. The menu has one source of truth and a price change happens once.
+For the first time, management can see the week without counting tickets.

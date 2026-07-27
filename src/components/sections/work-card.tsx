@@ -11,6 +11,7 @@ import type { Locale } from '@/i18n/routing';
 export function WorkCard({ item }: { item: WorkCase }) {
   const t = useTranslations('WorkPage');
   const locale = useLocale() as Locale;
+  const d = useTranslations('Domains');
 
   return (
     <Card className="flex h-full flex-col">
@@ -31,6 +32,21 @@ export function WorkCard({ item }: { item: WorkCase }) {
       <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
         {item.summary}
       </p>
+
+      {/* Which domains this case actually covered — the case studies are proof
+        * of the four-domain offer, so they name the domains explicitly. */}
+      {item.domains.length > 0 ? (
+        <ul className="mt-5 flex flex-wrap gap-1.5">
+          {item.domains.map((id) => (
+            <li
+              key={id}
+              className="rounded-pill border border-border px-2.5 py-1 text-xs text-muted"
+            >
+              {d(`cards.${id}.title`)}
+            </li>
+          ))}
+        </ul>
+      ) : null}
 
       <dl className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-xs text-dim">
         <div className="flex gap-1.5">

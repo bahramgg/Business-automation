@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { getWorkCases, getWorkCase } from '@/lib/work';
 import { routing } from '@/i18n/routing';
 import { isVerticalId } from '@/lib/demo/verticals';
+import { domainIds } from '@/lib/domains';
 
 // Case-study content rules (plan §6, §9). These read the real content/
 // directory, so they also guard the shipped MDX against malformed frontmatter.
@@ -37,6 +38,28 @@ describe('work content', () => {
             `${locale}/${item.slug}: unknown vertical "${item.artifact.vertical}"`,
           ).toBe(true);
         }
+      }
+    }
+  });
+
+  // Case studies are the proof for the four-domain offer, so each one has to
+  // say which domains it covered — otherwise it reads as generic work.
+  it('names at least one known domain per case', async () => {
+    for (const locale of routing.locales) {
+      for (const item of await getWorkCases(locale)) {
+        expect(item.domains.length, `${locale}/${item.slug}`).toBeGreaterThan(0);
+        for (const d of item.domains) {
+          expect(domainIds).toContain(d);
+        }
+      }
+    }
+  });
+
+  it('points every artifact at a tool that exists', async () => {
+    const tools = ['demo', 'roi', 'workload', 'repeat'];
+    for (const locale of routing.locales) {
+      for (const item of await getWorkCases(locale)) {
+        if (item.artifact) expect(tools).toContain(item.artifact.type);
       }
     }
   });
