@@ -103,6 +103,79 @@
     "primary": "Get started",
     "secondary": "See services"
   },
+  "ServicesPage": {
+    "eyebrow": "Services",
+    "title": "Three services that add up to one sales system",
+    "subtitle": "From winning attention to closing the sale to bringing buyers back — one service per stage, each with its own live tool."
+  },
+  "ServiceCommon": {
+    "anchorOverview": "Overview",
+    "anchorTool": "Try it",
+    "howTitle": "How it works",
+    "stepLabel": "Step",
+    "deliverablesTitle": "What you get",
+    "relatedTitle": "Related work",
+    "toolChip": "Interactive tool — result is an estimate",
+    "toolFullLink": "Full version & assumptions",
+    "toolComingTitle": "This tool goes live here soon",
+    "toolComingBody": "You'll see a result from your own numbers right here — no sign-up. It's being built.",
+    "relatedComing": "Case studies for this service are coming soon.",
+    "viewAllWork": "See all work",
+    "ctaButton": "Get started"
+  },
+  "Service": {
+    "website": {
+      "eyebrow": "Website & online store",
+      "title": "Where a buyer sees it and orders in seconds",
+      "oneLiner": "A fast, mobile-first site and store that shows your product, builds trust, and takes the order on the spot.",
+      "toolName": "Online-presence scan",
+      "steps": {
+        "s1": { "title": "Structure & content", "body": "We lay out products, categories, and key pages so buyers never get lost." },
+        "s2": { "title": "Design & build", "body": "A fast, responsive theme in your identity — clean, no clutter, no extra effects." },
+        "s3": { "title": "Launch", "body": "Domain, hosting, and payment gateway in your name; the site ships ready to sell." }
+      },
+      "deliverables": [
+        "Full responsive website",
+        "Store with cart and payment gateway",
+        "Simple admin panel for products",
+        "Domain and hosting in your name"
+      ]
+    },
+    "assistant": {
+      "eyebrow": "AI answering assistant",
+      "title": "An assistant that answers and takes orders around the clock",
+      "oneLiner": "An AI assistant on your site, Telegram, or WhatsApp that quotes prices, answers questions, and moves buyers to purchase.",
+      "toolName": "Live demo",
+      "steps": {
+        "s1": { "title": "Train", "body": "It learns your catalog and your most common customer questions." },
+        "s2": { "title": "Connect", "body": "It plugs into the channel where your customers already are." },
+        "s3": { "title": "Deliver", "body": "It answers around the clock and logs every lead for you." }
+      },
+      "deliverables": [
+        "Answering bot or widget on your channel",
+        "Catalog and ready answers for your business",
+        "Automatic logging of chats and leads",
+        "Admin guide"
+      ]
+    },
+    "automation": {
+      "eyebrow": "Operations & customer return",
+      "title": "Bring past buyers back, build recurring revenue",
+      "oneLiner": "Automatic reminders and follow-ups that return past customers at the right moment and take repetitive work off your plate.",
+      "toolName": "Repeat-customer calculator",
+      "steps": {
+        "s1": { "title": "Customer base", "body": "We collect and organize past purchases so no customer slips away." },
+        "s2": { "title": "Rules", "body": "Reminder timing and message are defined per customer segment." },
+        "s3": { "title": "Run", "body": "The system follows up on its own and reports results on a schedule." }
+      },
+      "deliverables": [
+        "Unified customer database",
+        "Automated reminder and follow-up campaigns",
+        "Periodic customer-return report",
+        "Connection to a messaging channel (SMS/Telegram/WhatsApp)"
+      ]
+    }
+  },
   "NotFound": {
     "title": "This page wasn't found",
     "body": "The link may be outdated or the address is wrong. Pick up from here.",
