@@ -4,7 +4,9 @@
 // self-hosted fonts as data URIs so the file works with no network at all
 // (the Artifact CSP blocks every external host). Next's own scripts are
 // stripped — they can't run standalone — and replaced with a small vanilla
-// shim that keeps the page switcher, timeline tabs, and ROI sliders live.
+// shim for the page switcher and timeline tabs. The calculators are not
+// reimplemented here — each domain has its own maths, and a shim would show
+// numbers that do not match the real site.
 //
 // Usage: node scripts/build-preview.mjs <origin> <out.html>
 
@@ -18,11 +20,13 @@ const outPath = process.argv[3] ?? resolve(root, 'preview.html');
 
 const PAGES = [
   { id: 'home', label: 'خانه', path: '/fa' },
-  { id: 'services', label: 'خدمات', path: '/fa/services' },
-  { id: 'assistant', label: 'دستیار', path: '/fa/services/assistant' },
-  { id: 'roi', label: 'ابزار ROI', path: '/fa/tools/roi' },
+  { id: 'domains', label: 'حوزه‌ها', path: '/fa/services' },
+  { id: 'acquisition', label: 'جذب', path: '/fa/services/acquisition' },
+  { id: 'sales', label: 'فروش', path: '/fa/services/sales' },
+  { id: 'operations', label: 'عملیات', path: '/fa/services/operations' },
+  { id: 'data', label: 'داده', path: '/fa/services/data' },
+  { id: 'readiness', label: 'ارزیابی', path: '/fa/tools/readiness' },
   { id: 'scope', label: 'پیکربند', path: '/fa/tools/scope' },
-  { id: 'work', label: 'نمونه‌کار', path: '/fa/work' },
   { id: 'terms', label: 'شرایط', path: '/fa/terms' },
   { id: 'en', label: 'EN', path: '/en' },
 ];
@@ -100,6 +104,7 @@ ${css}
 .pv-tab:hover{color:#eef1ff}
 .pv-tab.is-active{background:linear-gradient(100deg,#4d69ff,#916dff);color:#fff;border-color:#2b3058}
 .pv-tab:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
+.pv-note{width:100%;font-size:11px;color:#7c88be;line-height:1.6}
 .pv-shell{padding-block-start:2.9rem}
 .pv-page[hidden]{display:none}
 /* The real header is sticky; keep it below the preview bar. */
@@ -111,6 +116,7 @@ ${css}
 <nav class="pv-bar" aria-label="صفحه‌های پیش‌نمایش">
   <span class="pv-label">AFA preview</span>
   ${switcher}
+  <p class="pv-note">پیش‌نمایش ثابت طراحی و محتوا. جابه‌جایی صفحه و تب‌های تایم‌لاین کار می‌کنند؛ ماشین‌حساب‌ها و ارزیابی فقط در سایت زنده محاسبه می‌شوند.</p>
 </nav>
 <div class="pv-shell">
 ${sections.join('\n')}
@@ -144,40 +150,6 @@ ${sections.join('\n')}
     });
   });
 
-  // --- ROI sliders ---------------------------------------------------------
-  // Mirrors src/lib/roi.ts so the preview computes the same numbers.
-  var fa = new Intl.NumberFormat('fa-IR', { maximumFractionDigits: 0 });
-  document.querySelectorAll('.pv-page').forEach(function (page) {
-    var ranges = page.querySelectorAll('input[type="range"]');
-    if (ranges.length !== 4) return;
-    // Scope the outputs to the calculator's own grid. Querying the whole page
-    // would also match the hero headline, which uses the same gradient class.
-    var calc = ranges[0].closest('.grid') || page;
-    var outs = calc.querySelectorAll('.text-gradient, .text-2xl');
-    function render() {
-      var v = Array.prototype.map.call(ranges, function (r) { return Number(r.value); });
-      // Each slider shows its own value next to its label.
-      ranges.forEach(function (r) {
-        var badge = r.previousElementSibling && r.previousElementSibling.lastElementChild;
-        if (!badge) return;
-        var n = Number(r.value);
-        var max = Number(r.max);
-        badge.textContent = max === 100 ? fa.format(n) + '٪'
-          : max > 100000 ? fa.format(n) + ' تومان'
-          : fa.format(n);
-      });
-      var messages = v[0], answered = v[1], value = v[2], conv = v[3];
-      var unanswered = messages * (1 - answered / 100);
-      var orders = Math.round(unanswered * (conv / 100));
-      var lost = Math.round(orders * value);
-      var hours = Math.round((messages * 3) / 60);
-      if (outs[0]) outs[0].textContent = fa.format(lost);
-      if (outs[1]) outs[1].textContent = fa.format(orders);
-      if (outs[2]) outs[2].textContent = fa.format(hours);
-    }
-    ranges.forEach(function (r) { r.addEventListener('input', render); });
-    render();
-  });
 })();
 </script>
 </body>
