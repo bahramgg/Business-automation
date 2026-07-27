@@ -34,6 +34,19 @@ switch keeps you on the same page.
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm test` | Vitest (routing, message-key parity, utils) |
 | `npm run fonts:sync` | Refresh self-hosted fonts from @fontsource |
+| `npm run preview:html` | Bundle the running site into one self-contained HTML file |
+
+## Single-file preview
+
+```bash
+npm run build && npm run start          # in one shell
+npm run preview:html http://localhost:3000 preview.html
+```
+
+Renders eight real pages, inlines the stylesheet and the self-hosted fonts as
+data URIs, and drops Next's runtime for a small shim that keeps the page
+switcher, timeline tabs, and ROI sliders live. The result opens offline in any
+browser — useful for sharing the design before there's a deployment.
 
 ## Assistant demo (Cloudflare Worker)
 
