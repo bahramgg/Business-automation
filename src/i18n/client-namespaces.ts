@@ -19,6 +19,9 @@ export const clientNamespaces = [
   'Audit', // audit-scan.tsx
   'Scope', // scope-builder.tsx
   'Contact', // lead-form.tsx
+  'Readiness', // readiness-check.tsx
+  'Domains', // readiness-check.tsx (domain names in the result)
+  'Workload', // workload-calculator.tsx
 ] as const;
 
 /** Narrow a full catalog down to the namespaces the client actually needs. */

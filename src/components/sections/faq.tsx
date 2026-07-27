@@ -2,7 +2,9 @@ import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
 
-const ids = ['prices', 'time', 'ownership', 'iran', 'assistant'] as const;
+// Ordered by what a first-time visitor actually worries about, starting with
+// the scope question the four-domain positioning raises.
+const ids = ['scope', 'prices', 'time', 'ownership', 'iran'] as const;
 
 // Short FAQ (plan §4.8) built on native <details> — accessible and needs no
 // client JS. Emits FAQPage JSON-LD for search engines (plan §14).

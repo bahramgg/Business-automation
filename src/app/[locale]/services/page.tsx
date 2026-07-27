@@ -9,7 +9,7 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await props.params;
-  const t = await getTranslations({ locale, namespace: 'ServicesPage' });
+  const t = await getTranslations({ locale, namespace: 'DomainsPage' });
   return {
     title: t('title'),
     description: t('subtitle'),
@@ -24,7 +24,7 @@ export default async function ServicesOverviewPage(props: {
 }) {
   const { locale } = await props.params;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: 'ServicesPage' });
+  const t = await getTranslations({ locale, namespace: 'DomainsPage' });
 
   return (
     <>

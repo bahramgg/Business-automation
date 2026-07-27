@@ -1,9 +1,41 @@
-# CLAUDE.md — AFA services site
+# CLAUDE.md — AFA site
 
-Bilingual (fa/en) marketing + tools site for AFA, a sales-system builder. The
-full product plan lives in `docs/afa-services-site-plan-fa.md` — **read the
-relevant section before building each phase**, build only that phase's scope,
-then check its DoD (plan §16).
+Bilingual (fa/en) site for **AFA**, which automates a business as a system.
+The product plan lives in `docs/afa-services-site-plan-fa.md`; where this file
+and the plan disagree, this file wins — the positioning was revised after the
+plan was written.
+
+## Positioning (revised)
+
+AFA sells **business-system automation across four domains**, not a sales
+assistant. Sales is one domain of four. Never write copy that reduces the offer
+to answering messages.
+
+| # | Domain | Route | Its tool |
+|---|---|---|---|
+| 01 | جذب / Acquisition | `/services/acquisition` | online-presence scan |
+| 02 | فروش و پاسخ‌گویی / Sales & response | `/services/sales` | lost-sales calculator (live demo linked, not embedded) |
+| 03 | عملیات / Operations | `/services/operations` | repetitive-work calculator |
+| 04 | داده و گزارش / Data & reporting | `/services/data` | repeat-customer calculator |
+
+Entry tool: **automation-readiness assessment** (`/tools/readiness`, and on the
+home page). Its output is a routing decision — one named domain to start from.
+Closing tool: **scope configurator** (`/tools/scope`).
+
+The visitor's path is stated once, up front: **assess → measure that domain →
+scope**. One domain = one page = one tool; a page never shows two tools.
+
+## Tone
+
+Formal Persian, second-person plural («شما», «کنید»). No colloquialism, no
+«تو». English is a rewrite: shorter, technical, no Persian courtesies.
+
+## Design
+
+Minimal and quiet. The brand gradient is reserved for the primary action —
+no gradient headlines. Prefer type hierarchy, generous spacing, and hairline
+borders over cards-with-glow. No scroll-reveal animation: it left below-fold
+sections invisible in print and full-page captures.
 
 ## Non-negotiable rules
 

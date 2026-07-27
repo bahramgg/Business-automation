@@ -6,8 +6,8 @@ import { SectionHeading } from '@/components/ui/section-heading';
 import { Link } from '@/i18n/navigation';
 import { IconArrow } from '@/components/ui/icons';
 
-// Ownership order from plan §5: start tool, the three service tools, closer.
-const tools = ['roi', 'audit', 'demo', 'repeat', 'scope'] as const;
+// Path order: the entry assessment, then one tool per domain, then the closer.
+const tools = ['readiness', 'audit', 'roi', 'demo', 'workload', 'repeat', 'scope'] as const;
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>;

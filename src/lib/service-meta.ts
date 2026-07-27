@@ -8,7 +8,7 @@ export async function serviceMetadata(
   slug: ServiceSlug,
   locale: string,
 ): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: `Service.${slug}` });
+  const t = await getTranslations({ locale, namespace: `Domain.${slug}` });
   return {
     title: t('title'),
     description: t('oneLiner'),

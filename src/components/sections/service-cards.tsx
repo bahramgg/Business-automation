@@ -1,58 +1,46 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Container } from '@/components/ui/container';
-import { Card } from '@/components/ui/card';
-import {
-  IconStore,
-  IconBot,
-  IconAutomation,
-  IconSpark,
-  IconArrow,
-} from '@/components/ui/icons';
+import { IconArrow } from '@/components/ui/icons';
+import { domainIds } from '@/lib/domains';
+import { formatIndex } from '@/lib/format';
+import type { Locale } from '@/i18n/routing';
 
-// The three service cards — the anti-confusion spine (plan §4.4, §5). Shared by
-// the home "services map" and the /services overview so the mental model is
-// identical wherever it appears.
-const cards = [
-  { id: 'website', href: '/services/website', Icon: IconStore },
-  { id: 'assistant', href: '/services/assistant', Icon: IconBot },
-  { id: 'automation', href: '/services/automation', Icon: IconAutomation },
-] as const;
-
+// The four automation domains — the site's spine (one domain = one page = one
+// tool). They are numbered because the order is real: a business is found
+// before it sells, sells before it fulfils, and only then has data to act on.
 export function ServiceCards() {
-  const t = useTranslations('Services');
+  const t = useTranslations('Domains');
+  const locale = useLocale() as Locale;
 
   return (
     <Container>
-      <div className="grid gap-5 lg:grid-cols-3">
-        {cards.map(({ id, href, Icon }) => (
-          <Card key={id} topline className="flex flex-col">
-            <span className="text-lilac grid h-11 w-11 place-items-center rounded-field border border-border">
-              <Icon />
-            </span>
-            <h3 className="mt-5 text-lg font-bold text-ink">
-              {t(`cards.${id}.title`)}
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted">
-              {t(`cards.${id}.body`)}
-            </p>
-
-            {/* Tool chip — names the live tool this service owns. */}
-            <span className="mt-5 inline-flex w-fit items-center gap-1.5 rounded-pill border border-border-glass px-3 py-1.5 text-xs font-semibold text-muted">
-              <IconSpark className="h-3.5 w-3.5 text-lilac" />
-              {t('toolPrefix')}: {t(`cards.${id}.tool`)}
-            </span>
-
+      <ul className="grid gap-px overflow-hidden rounded-card border border-border bg-border sm:grid-cols-2">
+        {domainIds.map((id, index) => (
+          <li key={id} className="bg-bg-950">
             <Link
-              href={href}
-              className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-ink transition-colors hover:text-lilac"
+              href={`/services/${id}`}
+              className="flex h-full flex-col p-6 transition-colors hover:bg-surface/40 sm:p-8"
             >
-              {t('linkLabel')}
-              <IconArrow className="h-4 w-4 rtl:-scale-x-100" />
+              <span className="tnum text-xs text-dim">
+                {formatIndex(index + 1, locale)}
+              </span>
+              <h3 className="mt-3 text-lg font-semibold text-ink">
+                {t(`cards.${id}.title`)}
+              </h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
+                {t(`cards.${id}.body`)}
+              </p>
+              <span className="mt-6 flex items-center justify-between gap-3 border-t border-border pt-4">
+                <span className="text-xs text-dim">
+                  {t('toolPrefix')}: {t(`cards.${id}.tool`)}
+                </span>
+                <IconArrow className="h-4 w-4 shrink-0 text-dim rtl:-scale-x-100" />
+              </span>
             </Link>
-          </Card>
+          </li>
         ))}
-      </div>
+      </ul>
     </Container>
   );
 }

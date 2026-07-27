@@ -18,7 +18,7 @@ export function ToolBlock({
   fullHref?: string;
   className?: string;
 }) {
-  const t = useTranslations('ServiceCommon');
+  const t = useTranslations('DomainCommon');
 
   return (
     <div
@@ -55,7 +55,7 @@ export function ToolBlock({
 // Placeholder body used until each tool ships (Phase 3+). Honest "coming"
 // state — not lorem — kept inside the same ToolBlock shell.
 export function ToolComingSoon() {
-  const t = useTranslations('ServiceCommon');
+  const t = useTranslations('DomainCommon');
   return (
     <div className="flex flex-col items-center gap-3 py-8 text-center">
       <span className="grid h-12 w-12 place-items-center rounded-full border border-border-glass text-lilac">

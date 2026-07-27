@@ -1,14 +1,14 @@
 {
   "Meta": {
-    "title": "AFA — A sales system for your business",
-    "description": "Websites and AI assistants that actually close sales. AFA builds sales systems, not just websites."
+    "title": "AFA — Business system automation",
+    "description": "AFA automates business processes across four domains — acquisition, sales, operations, and data — so repetitive work stops consuming your team."
   },
   "Nav": {
-    "services": "Services",
+    "services": "Domains",
     "tools": "Tools",
     "work": "Work",
     "terms": "Terms",
-    "cta": "Get started",
+    "cta": "Start assessment",
     "home": "Home",
     "menu": "Menu",
     "openMenu": "Open menu",
@@ -22,151 +22,123 @@
   },
   "Home": {
     "statusActive": "System live",
-    "liveSignal": "messages answered automatically today",
-    "heroLine1": "Websites and AI assistants",
-    "heroLine2": "that actually close sales",
-    "subtitle": "A site and an assistant that answer, follow up, and close for you — even at 2 a.m.",
-    "ctaPrimary": "Get started",
-    "ctaSecondary": "See the tools"
-  },
-  "Problem": {
-    "eyebrow": "Where money leaks",
-    "title": "Three places sales slip through",
-    "cards": {
-      "unanswered": {
-        "title": "Unanswered messages",
-        "body": "DMs and messages land, then sit — late or never answered. The buyer doesn't wait; they move to the next seller."
+    "heroLine1": "Your business is a system.",
+    "heroLine2": "Let it run itself.",
+    "subtitle": "AFA automates repetitive processes across four domains — acquisition, sales, operations, and data — so your team spends its hours deciding, not repeating.",
+    "ctaPrimary": "Start the assessment",
+    "ctaSecondary": "See the domains",
+    "pathTitle": "Three steps",
+    "pathSubtitle": "You don't need to know which service you need. The path determines it.",
+    "path": {
+      "s1": {
+        "title": "Assess",
+        "body": "Under two minutes to identify which domain is losing the most."
       },
-      "catalog": {
-        "title": "Invisible catalog",
-        "body": "Your products aren't anywhere a buyer can browse and order on the spot. Every extra click is one fewer sale."
+      "s2": {
+        "title": "Measure that domain",
+        "body": "Its tool sizes the problem against your own numbers."
       },
-      "forgotten": {
-        "title": "Forgotten customers",
-        "body": "Someone who bought once is your likeliest next sale — but nothing brings them back."
+      "s3": {
+        "title": "Scope and schedule",
+        "body": "Scope and phasing are set, so the call starts from a clear picture."
       }
     }
   },
-  "Services": {
-    "eyebrow": "Service map",
-    "title": "Three services, one sales system",
-    "subtitle": "Each service ships with its own live tool, so you test the claim with your own numbers on the spot.",
-    "toolPrefix": "Tool",
-    "linkLabel": "Learn more",
+  "Problem": {
+    "eyebrow": "Why automate",
+    "title": "Repetitive work consumes the capacity to grow",
+    "body": "Most businesses aren't short of tools. They're short of process.",
     "cards": {
-      "website": {
-        "title": "Website & online store",
-        "body": "A site where a buyer sees the product, trusts it, and orders in seconds.",
+      "scattered": {
+        "title": "Work scattered",
+        "body": "Orders, messages, and records live in separate tools, with no single source of truth."
+      },
+      "manual": {
+        "title": "Manual repetition",
+        "body": "Work that repeats identically every day is still done by hand, absorbing your team's capacity."
+      },
+      "blind": {
+        "title": "Decisions without data",
+        "body": "Reports are assembled late and by hand, so decisions get made on guesswork."
+      }
+    }
+  },
+  "Domains": {
+    "eyebrow": "Automation domains",
+    "title": "Four domains, one system",
+    "subtitle": "We treat the business as a system. Each domain ships with its own measurement tool, so the size of the problem is clear before any decision.",
+    "toolPrefix": "Measurement tool",
+    "linkLabel": "Domain detail",
+    "orderLabel": "Domain",
+    "cards": {
+      "acquisition": {
+        "title": "Acquisition",
+        "body": "Being found: online presence and the route a new customer takes in.",
         "tool": "Online-presence scan"
       },
-      "assistant": {
-        "title": "AI answering assistant",
-        "body": "An assistant that answers around the clock, quotes prices, and takes orders.",
-        "tool": "Live demo"
+      "sales": {
+        "title": "Sales & response",
+        "body": "Turning interest into orders, and answering fast enough to keep the opportunity.",
+        "tool": "Lost-sales calculator"
       },
-      "automation": {
-        "title": "Operations & customer return",
-        "body": "Automatic reminders and follow-ups that bring past buyers back and build recurring revenue.",
+      "operations": {
+        "title": "Operations",
+        "body": "Internal processes and the daily repetition that consumes your team's hours.",
+        "tool": "Repetitive-work calculator"
+      },
+      "data": {
+        "title": "Data & reporting",
+        "body": "Unified records and scheduled reporting that separate decisions from guesswork.",
         "tool": "Repeat-customer calculator"
       }
     }
   },
-  "Faq": {
-    "eyebrow": "FAQ",
-    "title": "Know this before the call",
-    "items": {
-      "prices": {
-        "q": "Why are there no prices on the site?",
-        "a": "Tools give you scope and timeline, not a number. Pricing is set in a short call, matched to your actual work."
-      },
-      "time": {
-        "q": "How long does it take?",
-        "a": "Work ships in phases. The first usable phase reaches you well before the full build and runs from day one."
-      },
-      "ownership": {
-        "q": "Who owns the code and access?",
-        "a": "You do — source, domain, hosting, and every key. Nothing stays locked to us."
-      },
-      "iran": {
-        "q": "Does it run reliably from Iran?",
-        "a": "Yes. Infrastructure, fonts, and tools are chosen to stay fast and reachable from Iran."
-      },
-      "assistant": {
-        "q": "Does the assistant actually answer?",
-        "a": "Yes — soon you'll talk to it directly on the assistant page and see for yourself."
-      }
-    }
-  },
-  "Cta": {
-    "title": "Ready to build your sales system?",
-    "subtitle": "One short call to map the scope and the first phase together.",
-    "primary": "Get started",
-    "secondary": "See services"
-  },
-  "Demo": {
-    "eyebrow": "Live demo",
-    "title": "Talk to the assistant yourself",
-    "subtitle": "Pick a business type and ask it anything — it answers from that business's sample catalog.",
-    "choosePrompt": "Pick a business type:",
-    "verticals": {
-      "clothing": "Clothing store",
-      "restaurant": "Restaurant",
-      "salon": "Salon",
-      "electronics": "Appliance store",
-      "services": "Technical services"
+  "Readiness": {
+    "eyebrow": "Step one",
+    "title": "How much of your business runs itself?",
+    "subtitle": "Answer eight statements to get a score per domain and a recommended starting point. No sign-up.",
+    "levels": {
+      "manual": "Manual",
+      "partial": "Partly automated",
+      "automated": "Automated"
     },
-    "empty": "Try a suggested question, or write your own.",
-    "typing": "Typing…",
-    "placeholder": "Ask a question…",
-    "send": "Send",
-    "limitReached": "You've reached this demo's message limit.",
-    "sessionCounter": "{used, number} of {max, number} messages this session",
-    "note": "This is a sample demo on a fictional catalog; the real one runs on yours.",
-    "suggestions": {
-      "clothing": {
-        "q1": "How much is the cotton coat?",
-        "q2": "Do you ship to other cities?",
-        "q3": "Can I exchange for another size?"
-      },
-      "restaurant": {
-        "q1": "How much is the koobideh plate?",
-        "q2": "What time are you open until?",
-        "q3": "Can you reserve a table for 8?"
-      },
-      "salon": {
-        "q1": "How much is a haircut?",
-        "q2": "Do you have an opening tomorrow?",
-        "q3": "What's the cancellation policy?"
-      },
-      "electronics": {
-        "q1": "How much is the vacuum cleaner?",
-        "q2": "Does it come with a warranty?",
-        "q3": "Do you offer cash on delivery?"
-      },
-      "services": {
-        "q1": "What does an inspection cost?",
-        "q2": "Can you send a technician today?",
-        "q3": "Is the work guaranteed?"
-      }
-    }
+    "questions": {
+      "acq1": "New customers find you without a personal introduction.",
+      "acq2": "Product or service information is online and current.",
+      "sal1": "Customer questions get a first reply within an hour.",
+      "sal2": "Orders are recorded without manual coordination.",
+      "ops1": "Daily repetitive tasks run without a person driving them.",
+      "ops2": "The status of any order or case is traceable in one place.",
+      "dat1": "Customer history is recorded in one unified database.",
+      "dat2": "Performance reports are produced automatically on a schedule."
+    },
+    "submit": "Show the result",
+    "scoreLabel": "Automation readiness",
+    "scoreOutOf": "out of 100",
+    "byDomainTitle": "Score by domain",
+    "startWithTitle": "Recommended starting point",
+    "startWithBody": "This domain is furthest from automated, and fixing it has the largest effect on the rest of the system.",
+    "goToDomain": "Go to {domain}",
+    "disclaimer": "This assessment is based on your answers and does not replace a detailed process review.",
+    "retake": "Retake"
   },
   "Roi": {
-    "eyebrow": "Start here",
-    "title": "What does not answering cost you?",
-    "subtitle": "Set four sliders and see how much you lose in sales each month — no sign-up.",
+    "eyebrow": "This domain's tool",
+    "title": "What does a late reply cost?",
+    "subtitle": "Set four numbers to estimate monthly lost sales. No sign-up.",
     "inputs": {
       "messages": {
-        "label": "Messages & DMs per month"
+        "label": "Messages and requests per month"
       },
       "answered": {
-        "label": "How many are actually answered?"
+        "label": "What share gets answered?"
       },
       "orderValue": {
         "label": "Average order value",
         "unit": "toman"
       },
       "conversion": {
-        "label": "Of each conversation, how many become a sale?"
+        "label": "What share of conversations becomes a sale?"
       }
     },
     "results": {
@@ -191,264 +163,63 @@
       "methodBody": "Lost sales = unanswered messages × sale conversion rate × average order value.",
       "assumptions": [
         "Unanswered messages = total messages × (1 minus the answered share).",
-        "Freed hours assume an average of 3 minutes per message.",
+        "Freed hours assume an average of three minutes per message.",
         "These figures are estimates and don't replace your real business data."
       ]
     }
   },
-  "ServicesPage": {
-    "eyebrow": "Services",
-    "title": "Three services that add up to one sales system",
-    "subtitle": "From winning attention to closing the sale to bringing buyers back — one service per stage, each with its own live tool."
-  },
-  "ServiceCommon": {
-    "anchorOverview": "Overview",
-    "anchorTool": "Try it",
-    "howTitle": "How it works",
-    "stepLabel": "Step",
-    "deliverablesTitle": "What you get",
-    "relatedTitle": "Related work",
-    "toolChip": "Interactive tool — result is an estimate",
-    "toolFullLink": "Full version & assumptions",
-    "toolComingTitle": "This tool goes live here soon",
-    "toolComingBody": "You'll see a result from your own numbers right here — no sign-up. It's being built.",
-    "relatedComing": "Case studies for this service are coming soon.",
-    "viewAllWork": "See all work",
-    "ctaButton": "Get started"
-  },
-  "Service": {
-    "website": {
-      "eyebrow": "Website & online store",
-      "title": "Where a buyer sees it and orders in seconds",
-      "oneLiner": "A fast, mobile-first site and store that shows your product, builds trust, and takes the order on the spot.",
-      "toolName": "Online-presence scan",
-      "steps": {
-        "s1": {
-          "title": "Structure & content",
-          "body": "We lay out products, categories, and key pages so buyers never get lost."
-        },
-        "s2": {
-          "title": "Design & build",
-          "body": "A fast, responsive theme in your identity — clean, no clutter, no extra effects."
-        },
-        "s3": {
-          "title": "Launch",
-          "body": "Domain, hosting, and payment gateway in your name; the site ships ready to sell."
-        }
+  "Workload": {
+    "eyebrow": "This domain's tool",
+    "title": "How much of the week goes to repetitive work?",
+    "subtitle": "Set four numbers to see how many hours a month are recoverable.",
+    "inputs": {
+      "staff": {
+        "label": "How many people do repetitive work?",
+        "unit": "people"
       },
-      "deliverables": [
-        "Full responsive website",
-        "Store with cart and payment gateway",
-        "Simple admin panel for products",
-        "Domain and hosting in your name"
-      ]
+      "hours": {
+        "label": "Hours per person per day",
+        "unit": "hours"
+      },
+      "days": {
+        "label": "Working days per month",
+        "unit": "days"
+      },
+      "automatable": {
+        "label": "What share of it can a system take over?"
+      }
     },
-    "assistant": {
-      "eyebrow": "AI answering assistant",
-      "title": "An assistant that answers and takes orders around the clock",
-      "oneLiner": "An AI assistant on your site, Telegram, or WhatsApp that quotes prices, answers questions, and moves buyers to purchase.",
-      "toolName": "Live demo",
-      "steps": {
-        "s1": {
-          "title": "Train",
-          "body": "It learns your catalog and your most common customer questions."
-        },
-        "s2": {
-          "title": "Connect",
-          "body": "It plugs into the channel where your customers already are."
-        },
-        "s3": {
-          "title": "Deliver",
-          "body": "It answers around the clock and logs every lead for you."
-        }
+    "results": {
+      "monthly": {
+        "label": "Repetitive hours per month (estimated)",
+        "unit": "hours"
       },
-      "deliverables": [
-        "Answering bot or widget on your channel",
-        "Catalog and ready answers for your business",
-        "Automatic logging of chats and leads",
-        "Admin guide"
-      ]
+      "reclaimed": {
+        "label": "Recoverable hours per month"
+      },
+      "workdays": {
+        "label": "Working days returned to the team"
+      }
     },
-    "automation": {
-      "eyebrow": "Operations & customer return",
-      "title": "Bring past buyers back, build recurring revenue",
-      "oneLiner": "Automatic reminders and follow-ups that return past customers at the right moment and take repetitive work off your plate.",
-      "toolName": "Repeat-customer calculator",
-      "steps": {
-        "s1": {
-          "title": "Customer base",
-          "body": "We collect and organize past purchases so no customer slips away."
-        },
-        "s2": {
-          "title": "Rules",
-          "body": "Reminder timing and message are defined per customer segment."
-        },
-        "s3": {
-          "title": "Run",
-          "body": "The system follows up on its own and reports results on a schedule."
-        }
-      },
-      "deliverables": [
-        "Unified customer database",
-        "Automated reminder and follow-up campaigns",
-        "Periodic customer-return report",
-        "Connection to a messaging channel (SMS/Telegram/WhatsApp)"
+    "disclaimer": "This is an estimate from your own inputs, not a delivery commitment. The automatable share is confirmed after a process review.",
+    "copyLink": "Copy result link",
+    "copied": "Copied",
+    "full": {
+      "title": "Repetitive-work calculator",
+      "intro": "Use your team's own numbers to see how many working hours go to work a system could do.",
+      "methodTitle": "Method & assumptions",
+      "methodBody": "Recoverable hours = people × hours per day × working days × automatable share.",
+      "assumptions": [
+        "A working day is taken as eight hours.",
+        "You set the automatable share yourself; the default is a conservative assumption.",
+        "This estimate does not replace a review of the actual processes."
       ]
-    }
-  },
-  "WorkPage": {
-    "eyebrow": "Work",
-    "title": "Things we built that are running",
-    "subtitle": "Each case has a real problem, a thing that was built, and an artifact you can try right here.",
-    "empty": "No case studies published in this language yet.",
-    "confidentialLabel": "Confidential case",
-    "confidentialNote": "The client's name and logo are withheld at their request.",
-    "year": "Year",
-    "duration": "Duration",
-    "vertical": "Sector",
-    "stack": "Stack",
-    "modules": "Modules",
-    "resultsTitle": "Result",
-    "artifactTitle": "Try this case",
-    "backToWork": "Back to work",
-    "readCase": "Read the case"
-  },
-  "Timeline": {
-    "eyebrow": "How it runs",
-    "title": "First call to handover, in three phases",
-    "subtitle": "Each phase ships something usable. You don't wait for the whole project to see results.",
-    "phaseLabel": "Phase",
-    "deliverableLabel": "Phase output",
-    "phases": {
-      "p1": {
-        "name": "Discovery & scope",
-        "duration": "1–2 weeks",
-        "summary": "We map where your customers come from, where they drop off, and which leak to close first.",
-        "steps": [
-          "Session on the business and its current sales path",
-          "Review of channels, catalog, and response times",
-          "Scope definition and phase order"
-        ],
-        "deliverable": "A scope and timeline document, no ambiguity"
-      },
-      "p2": {
-        "name": "Build phase one",
-        "duration": "3–6 weeks",
-        "summary": "The first usable piece gets built and shipped — the one with the most impact.",
-        "steps": [
-          "Design and build in your identity",
-          "Two defined revision rounds",
-          "Testing against real business data"
-        ],
-        "deliverable": "A live, working system — not a demo"
-      },
-      "p3": {
-        "name": "Handover & support",
-        "duration": "Ongoing",
-        "summary": "Everything transfers into your name and the bug-fix warranty period starts.",
-        "steps": [
-          "Domain, hosting, and keys transferred to you",
-          "Training and written guide",
-          "Bug-fix warranty and a direct support channel"
-        ],
-        "deliverable": "Full ownership + documentation + support"
-      }
-    }
-  },
-  "Deliverables": {
-    "eyebrow": "Deliverables",
-    "title": "Exactly what you get",
-    "subtitle": "No overclaiming, no hidden line items. Every row is something that actually reaches you.",
-    "note": "Per-project specifics live in the scope document; this list is the framework.",
-    "groups": {
-      "product": {
-        "title": "Product",
-        "items": [
-          "Full responsive website",
-          "Telegram bot or web answering widget",
-          "Simple admin panel"
-        ]
-      },
-      "data": {
-        "title": "Data",
-        "items": [
-          "Customer database",
-          "Product catalog",
-          "Periodic reports"
-        ]
-      },
-      "ownership": {
-        "title": "Ownership",
-        "items": [
-          "Complete source code",
-          "Domain and hosting in your name",
-          "Every key and credential under your organization"
-        ]
-      },
-      "docs": {
-        "title": "Documentation",
-        "items": [
-          "Written guide",
-          "Short training video",
-          "Per-phase handover doc"
-        ]
-      },
-      "support": {
-        "title": "Support",
-        "items": [
-          "Bug-fix warranty period",
-          "Direct support channel"
-        ]
-      }
-    }
-  },
-  "Terms": {
-    "eyebrow": "Terms",
-    "title": "The framework, before we start",
-    "banner": "This page is a framework, not a contract; each project gets its own signed agreement.",
-    "sections": {
-      "start": {
-        "title": "How we start",
-        "body": "We start with a short call and write the scope. Work begins once both sides agree on that document."
-      },
-      "phases": {
-        "title": "Phasing and staged delivery",
-        "body": "Work ships in defined phases, each with its own usable output. Payment is tied to those same phases."
-      },
-      "revisions": {
-        "title": "Revisions",
-        "body": "Each phase includes two revision rounds. Further rounds or a scope change are estimated as a new phase."
-      },
-      "clientDuties": {
-        "title": "What we need from you",
-        "body": "Content and images, access to your current channels, and one person who can make decisions. Delays on these three move the timeline."
-      },
-      "ip": {
-        "title": "IP and code ownership",
-        "body": "Source, domain, hosting, and every key belong to your organization. No part of the system stays locked to us."
-      },
-      "confidentiality": {
-        "title": "Confidentiality",
-        "body": "Your business and customer data stay confidential. If you'd rather not be named in our work, the case is published anonymously or not at all."
-      },
-      "thirdParty": {
-        "title": "Third-party running costs",
-        "body": "Servers, domains, AI models, and SMS carry running costs. These are separate from the build fee and the accounts are opened in your name."
-      },
-      "support": {
-        "title": "Support scope",
-        "body": "Fixing what we built is free during the warranty period. New features, content changes, and work on other systems are not support and are estimated separately."
-      },
-      "stop": {
-        "title": "Stopping or withdrawing",
-        "body": "Either side can stop between phases. Work completed to that point is settled and handed over; nothing is held hostage."
-      }
     }
   },
   "Repeat": {
-    "eyebrow": "This service's tool",
-    "title": "How much revenue is sitting in your past customers?",
-    "subtitle": "Use your own numbers to see what automatic reminders bring back each month.",
+    "eyebrow": "This domain's tool",
+    "title": "What is your customer data worth?",
+    "subtitle": "Use your own numbers to see what automated reminders bring back each month.",
     "inputs": {
       "customers": {
         "label": "Customers to date"
@@ -462,7 +233,7 @@
         "value": "{months, number} months"
       },
       "returning": {
-        "label": "What share actually come back today?"
+        "label": "What share come back today?"
       }
     },
     "results": {
@@ -471,7 +242,7 @@
         "unit": "toman"
       },
       "forgotten": {
-        "label": "Customers forgotten right now"
+        "label": "Customers forgotten this month"
       },
       "multiple": {
         "label": "Cost to win a new customer vs. bring one back (estimated)",
@@ -483,7 +254,7 @@
     "copied": "Copied",
     "full": {
       "title": "Repeat-customer calculator",
-      "intro": "Your biggest revenue source is someone who already bought. See how much of it is left on the table.",
+      "intro": "Your largest revenue source is someone who already bought. See how much of it is unused.",
       "methodTitle": "Method & assumptions",
       "methodBody": "Recoverable revenue = customers due to rebuy this month × achievable lift in return rate × average purchase.",
       "assumptions": [
@@ -494,18 +265,18 @@
     }
   },
   "Audit": {
-    "eyebrow": "This service's tool",
-    "title": "What's your online presence out of 100?",
-    "subtitle": "Add your site URL (optional) and answer five short questions to get a score and three quick wins.",
+    "eyebrow": "This domain's tool",
+    "title": "What is your online presence out of 100?",
+    "subtitle": "Add your site URL (optional) and answer five short questions for a score and the highest-impact actions.",
     "urlLabel": "Site URL (optional)",
-    "urlHint": "Leave it empty if you have no site; the score is then based on your answers alone.",
+    "urlHint": "Leave it empty if you have no site; the score is then based on your answers.",
     "questionsLabel": "Five short questions:",
     "questions": {
-      "hasOnlineCatalog": "Do you have an online product catalog?",
+      "hasOnlineCatalog": "Is your product or service catalog available online?",
       "hasOnlinePayment": "Do you accept online payment?",
       "hasCustomerDatabase": "Do you keep a customer database?",
-      "replySpeed": "How long does your first reply usually take?",
-      "salesChannel": "Where do most sales come from?"
+      "replySpeed": "How long does a first reply usually take?",
+      "salesChannel": "Which route do most sales come through?"
     },
     "replyOptions": {
       "minutes": "Minutes",
@@ -518,24 +289,24 @@
       "phone": "Phone",
       "in-person": "In person"
     },
-    "submit": "Show my score",
+    "submit": "Show the score",
     "scanning": "Checking…",
     "scoreLabel": "Online presence score",
     "scoreOutOf": "out of 100",
-    "winsTitle": "Quickest wins:",
-    "noWins": "Nothing major is missing — the fundamentals are in place.",
+    "winsTitle": "Highest-impact actions:",
+    "noWins": "Nothing significant is missing; the fundamentals are in place.",
     "wins": {
-      "site": "Build a real site; this is the biggest gap.",
+      "site": "Build a real site; this is the largest gap.",
       "catalog": "Put the catalog online so buyers can see without asking.",
-      "payment": "Add online payment so purchases don't stall halfway.",
-      "reply": "Cut first-reply time — an automatic assistant solves exactly this.",
-      "database": "Build a customer database so you can bring people back.",
-      "mobile": "Fix the site on mobile; that's where most visits come from.",
+      "payment": "Add online payment so purchases aren't abandoned halfway.",
+      "reply": "Cut first-reply time — automated response solves exactly this.",
+      "database": "Build a customer database so returning them becomes possible.",
+      "mobile": "Fix the site on mobile; most visits come from there.",
       "contact": "Make the contact route obvious on the site."
     },
     "disclaimer": "This score is an estimate from your answers and a surface-level page check, not a full audit.",
-    "questionnaireOnlyNote": "This score is based on your answers only; no site was checked.",
-    "instagramNote": "Instagram pages aren't checked (automated access isn't possible) — we only ask about them.",
+    "questionnaireOnlyNote": "This score is based on your answers alone; no site was checked.",
+    "instagramNote": "Instagram pages aren't checked, as automated access isn't possible; we only ask about them.",
     "urlErrors": {
       "invalid": "That address isn't valid.",
       "scheme": "Only http and https addresses are checked.",
@@ -544,14 +315,61 @@
       "non-standard-port": "Only standard web ports are checked."
     }
   },
+  "Demo": {
+    "eyebrow": "Live sample",
+    "title": "Try automated response",
+    "subtitle": "Pick a sector and ask a question; answers come from that business's sample catalog.",
+    "choosePrompt": "Pick a sector:",
+    "verticals": {
+      "clothing": "Clothing store",
+      "restaurant": "Restaurant",
+      "salon": "Salon",
+      "electronics": "Appliance store",
+      "services": "Technical services"
+    },
+    "empty": "Choose a suggested question, or write your own.",
+    "typing": "Typing…",
+    "placeholder": "Write your question…",
+    "send": "Send",
+    "limitReached": "This sample's message limit has been reached.",
+    "sessionCounter": "{used, number} of {max, number} messages this session",
+    "note": "This is a sample on a fictional catalog; the real system runs on your business data.",
+    "suggestions": {
+      "clothing": {
+        "q1": "How much is the cotton coat?",
+        "q2": "Do you ship to other cities?",
+        "q3": "Can I exchange for another size?"
+      },
+      "restaurant": {
+        "q1": "How much is the koobideh plate?",
+        "q2": "What time are you open until?",
+        "q3": "Can you reserve a table for eight?"
+      },
+      "salon": {
+        "q1": "How much is a haircut?",
+        "q2": "Do you have an opening tomorrow?",
+        "q3": "What is the cancellation policy?"
+      },
+      "electronics": {
+        "q1": "How much is the vacuum cleaner?",
+        "q2": "Does it come with a warranty?",
+        "q3": "Do you offer cash on delivery?"
+      },
+      "services": {
+        "q1": "What does an inspection cost?",
+        "q2": "Can you send a technician today?",
+        "q3": "Is the work guaranteed?"
+      }
+    }
+  },
   "Scope": {
-    "eyebrow": "Wrap up",
-    "title": "Build your own scope",
-    "subtitle": "Pick the modules to see the phasing and prerequisites, and arrive at the call ready.",
+    "eyebrow": "Step three",
+    "title": "Define your scope",
+    "subtitle": "Select the modules to see phasing and prerequisites, so the call starts from a clear picture.",
     "modulesLabel": "What do you need?",
     "modules": {
       "store": "Online store",
-      "assistant": "Answering assistant",
+      "assistant": "Automated response",
       "orderByMessage": "Order by message",
       "campaign": "Reminder campaigns",
       "loyalty": "Loyalty club",
@@ -559,14 +377,14 @@
       "woocommerce": "WooCommerce integration"
     },
     "autoAdded": "prerequisite",
-    "urgencyLabel": "How urgent is it?",
+    "urgencyLabel": "Urgency",
     "urgencies": {
       "relaxed": "No rush",
       "normal": "Normal",
       "urgent": "Urgent"
     },
-    "emptyState": "Pick at least one module to see the phasing.",
-    "summaryTitle": "Suggested scope",
+    "emptyState": "Select at least one module to see the phasing.",
+    "summaryTitle": "Proposed scope",
     "totalWeeks": "About {weeks, number} weeks",
     "phaseLabel": "Phase {n}",
     "phaseWeeks": "About {weeks, number} weeks",
@@ -577,58 +395,299 @@
       "customerList": "A list of past customers, in whatever form it exists",
       "channel": "Access to the channel your customers already use"
     },
-    "noPriceNote": "This is scope and timing only. Pricing is set in the call, against this exact scope.",
+    "noPriceNote": "This tool outputs scope and timing only. Pricing is set in the call, against this exact scope.",
     "downloadPdf": "Download PDF"
   },
-  "ToolsPage": {
-    "eyebrow": "Tools",
-    "title": "Tools that answer with your own numbers",
-    "subtitle": "Each tool belongs to one service. This is just the list; each service explains itself on its own page.",
-    "openTool": "Open",
-    "items": {
-      "roi": {
-        "name": "Lost-sales calculator",
-        "line": "See what not answering costs you each month."
+  "DomainsPage": {
+    "eyebrow": "Domains",
+    "title": "The four domains that make a business",
+    "subtitle": "From being found to deciding on data. Each domain stands alone, and together they form one system."
+  },
+  "DomainCommon": {
+    "anchorOverview": "Overview",
+    "anchorTool": "Measure",
+    "howTitle": "How this domain gets automated",
+    "stepLabel": "Step",
+    "deliverablesTitle": "What this domain delivers",
+    "relatedTitle": "Related work",
+    "toolChip": "Measurement tool — result is an estimate",
+    "toolFullLink": "Full version & assumptions",
+    "toolComingTitle": "This domain's tool goes live soon",
+    "toolComingBody": "You'll see a result from your own numbers right here. It's being built.",
+    "secondaryTitle": "Live sample",
+    "secondaryBody": "Try automated response before making any decision.",
+    "secondaryCta": "Try it",
+    "relatedComing": "Case studies for this domain are coming soon.",
+    "viewAllWork": "See all work",
+    "nextStepTitle": "Next step",
+    "nextStepBody": "Define your scope so the call starts from a clear picture.",
+    "ctaButton": "Define the scope"
+  },
+  "Domain": {
+    "acquisition": {
+      "eyebrow": "Acquisition domain",
+      "title": "Before anyone buys, they have to find you",
+      "oneLiner": "A dependable online presence, so new customers find you without a personal introduction and enter a clear path to purchase.",
+      "toolName": "Online-presence scan",
+      "steps": {
+        "s1": { "title": "Review", "body": "Current presence, channels, and entry paths are reviewed and the gaps listed." },
+        "s2": { "title": "Build the base", "body": "Site and online catalog are implemented with a structure buyers don't get lost in." },
+        "s3": { "title": "Measure", "body": "The entry path becomes traceable, so the effect of each change is visible." }
       },
-      "demo": {
-        "name": "Live assistant demo",
-        "line": "Talk to the assistant yourself and judge the answers."
+      "deliverables": [
+        "Full responsive website",
+        "Online product or service catalog",
+        "Traceable customer entry path",
+        "Domain and hosting in your organization's name"
+      ]
+    },
+    "sales": {
+      "eyebrow": "Sales & response domain",
+      "title": "A timely reply is the difference between an opportunity and a lost one",
+      "oneLiner": "Automated response and order capture without manual coordination, so no request sits in a queue.",
+      "toolName": "Lost-sales calculator",
+      "steps": {
+        "s1": { "title": "Define answers", "body": "Your catalog and recurring questions become the basis for responses." },
+        "s2": { "title": "Connect channels", "body": "The system connects to the channel your customers already use." },
+        "s3": { "title": "Capture", "body": "Every conversation and order is recorded, so nothing is lost in messages." }
       },
-      "audit": {
-        "name": "Online-presence scan",
-        "line": "A 0–100 score for your online presence, with three quick wins."
+      "deliverables": [
+        "Automated response on your channel",
+        "Order capture without manual coordination",
+        "Automatic logging of conversations and leads",
+        "Admin guide"
+      ]
+    },
+    "operations": {
+      "eyebrow": "Operations domain",
+      "title": "Work that repeats every day shouldn't be done by hand",
+      "oneLiner": "Automated internal processes and status tracking, so your team's hours go to decisions rather than repetition.",
+      "toolName": "Repetitive-work calculator",
+      "steps": {
+        "s1": { "title": "Map the process", "body": "Daily repetitive tasks are listed and the automatable points identified." },
+        "s2": { "title": "Automate", "body": "Rules are defined and run so work proceeds without a person driving it." },
+        "s3": { "title": "Track", "body": "The status of every order or case becomes visible in one place." }
       },
-      "repeat": {
-        "name": "Repeat-customer calculator",
-        "line": "See what bringing past customers back is worth."
+      "deliverables": [
+        "Automation of repetitive processes",
+        "Order and case status in a single view",
+        "Automated reminders and follow-up",
+        "Process documentation and run guide"
+      ]
+    },
+    "data": {
+      "eyebrow": "Data & reporting domain",
+      "title": "Decisions on data, not memory",
+      "oneLiner": "Unified customer records and automatic periodic reporting, so the state of the business is clear at any moment.",
+      "toolName": "Repeat-customer calculator",
+      "steps": {
+        "s1": { "title": "Unify", "body": "Scattered customer data is collected into a single database." },
+        "s2": { "title": "Report automatically", "body": "Periodic reports are produced and sent without manual work." },
+        "s3": { "title": "Act", "body": "Data feeds return campaigns, so it doesn't stay a report." }
       },
-      "scope": {
-        "name": "Package configurator",
-        "line": "Assemble your scope and see how it phases."
+      "deliverables": [
+        "Unified customer database",
+        "Automatic periodic reporting",
+        "Data-driven customer return campaigns",
+        "Data export under your organization's name"
+      ]
+    }
+  },
+  "Timeline": {
+    "eyebrow": "How delivery works",
+    "title": "Assessment to handover, in three phases",
+    "subtitle": "Each phase ships something usable. There's no waiting for the whole project.",
+    "phaseLabel": "Phase",
+    "deliverableLabel": "Phase output",
+    "phases": {
+      "p1": {
+        "name": "Assessment & scope",
+        "duration": "1–2 weeks",
+        "summary": "Current processes are reviewed to establish which domain has the largest effect and where work begins.",
+        "steps": [
+          "Review of current processes and channels",
+          "Priority domain and success measure defined",
+          "Scope and timeline documented"
+        ],
+        "deliverable": "A scope and timeline document, no ambiguity"
+      },
+      "p2": {
+        "name": "First phase build",
+        "duration": "3–6 weeks",
+        "summary": "The first usable part is built and delivered — the part with the largest effect.",
+        "steps": [
+          "Design and build matched to your identity",
+          "Two defined revision rounds",
+          "Testing against real business data"
+        ],
+        "deliverable": "A running system, not a trial"
+      },
+      "p3": {
+        "name": "Handover & support",
+        "duration": "Ongoing",
+        "summary": "Full ownership transfers and the bug-fix warranty period begins.",
+        "steps": [
+          "Domain, hosting, and keys transferred to your organization",
+          "Training and written documentation",
+          "Bug-fix warranty and a direct support channel"
+        ],
+        "deliverable": "Full ownership, documentation, and support"
       }
     }
   },
+  "Deliverables": {
+    "eyebrow": "Deliverables",
+    "title": "What you receive",
+    "subtitle": "No overclaiming, no hidden line items. Every row is something that is actually delivered.",
+    "note": "Per-project specifics are set in the scope document; this list is the general framework.",
+    "groups": {
+      "product": {
+        "title": "Product",
+        "items": [
+          "Full responsive website",
+          "Automated response on your chosen channel",
+          "Admin panel"
+        ]
+      },
+      "data": {
+        "title": "Data",
+        "items": ["Customer database", "Product catalog", "Periodic reports"]
+      },
+      "ownership": {
+        "title": "Ownership",
+        "items": [
+          "Complete source code",
+          "Domain and hosting in your organization's name",
+          "Every key and credential under your organization"
+        ]
+      },
+      "docs": {
+        "title": "Documentation",
+        "items": ["Written guide", "Short training video", "Per-phase handover document"]
+      },
+      "support": {
+        "title": "Support",
+        "items": ["Bug-fix warranty period", "Direct support channel"]
+      }
+    }
+  },
+  "Terms": {
+    "eyebrow": "Terms",
+    "title": "The framework, before work begins",
+    "banner": "This page is a general framework, not a contract; each project gets its own signed agreement.",
+    "sections": {
+      "start": {
+        "title": "How work begins",
+        "body": "Work starts with a short call and a scope document. Delivery begins once both sides agree on that document."
+      },
+      "phases": {
+        "title": "Phasing and staged delivery",
+        "body": "Work ships in defined phases, each with its own usable output. Payment is tied to those same phases."
+      },
+      "revisions": {
+        "title": "Revisions",
+        "body": "Each phase includes two revision rounds. Further rounds or a scope change are estimated as a new phase."
+      },
+      "clientDuties": {
+        "title": "What we need from you",
+        "body": "Content and images, access to current channels, and one person who can make decisions. Delays on these three move the timeline."
+      },
+      "ip": {
+        "title": "IP and code ownership",
+        "body": "Source, domain, hosting, and every key belong to your organization. No part of the system stays dependent on us."
+      },
+      "confidentiality": {
+        "title": "Confidentiality",
+        "body": "Your business and customer data stay confidential. On request, work is published anonymously or not at all."
+      },
+      "thirdParty": {
+        "title": "Third-party running costs",
+        "body": "Servers, domains, AI models, and SMS carry running costs. These are separate from the build fee and the accounts are opened in your organization's name."
+      },
+      "support": {
+        "title": "Support scope",
+        "body": "Fixing what we built is free during the warranty period. New features, content changes, and work on other systems fall outside support and are estimated separately."
+      },
+      "stop": {
+        "title": "Stopping or withdrawing",
+        "body": "Either side may stop between phases. Work completed to that point is settled and handed over."
+      }
+    }
+  },
+  "WorkPage": {
+    "eyebrow": "Work",
+    "title": "Systems we built that are running",
+    "subtitle": "Each case has a real problem, an implemented solution, and a tool you can examine here.",
+    "empty": "No case studies published in this language yet.",
+    "confidentialLabel": "Confidential case",
+    "confidentialNote": "The client's name and mark are withheld at their request.",
+    "year": "Year",
+    "duration": "Duration",
+    "vertical": "Sector",
+    "stack": "Stack",
+    "modules": "Modules",
+    "resultsTitle": "Result",
+    "artifactTitle": "Examine this case",
+    "backToWork": "Back to work",
+    "readCase": "Read the case"
+  },
+  "ToolsPage": {
+    "eyebrow": "Tools",
+    "title": "Measurement tools",
+    "subtitle": "Each tool belongs to one domain. This page is the index; each domain explains itself on its own page.",
+    "openTool": "Open",
+    "items": {
+      "readiness": { "name": "Automation readiness assessment", "line": "Start here: identifies which domain is losing the most." },
+      "audit": { "name": "Online-presence scan", "line": "Acquisition: a presence score with the highest-impact actions." },
+      "roi": { "name": "Lost-sales calculator", "line": "Sales: estimates the cost of late replies." },
+      "demo": { "name": "Live response sample", "line": "Sales: try automated response directly." },
+      "workload": { "name": "Repetitive-work calculator", "line": "Operations: hours recoverable for your team." },
+      "repeat": { "name": "Repeat-customer calculator", "line": "Data: what bringing past customers back is worth." },
+      "scope": { "name": "Scope configurator", "line": "Wrap up: scope and phasing before the call." }
+    }
+  },
+  "Faq": {
+    "eyebrow": "FAQ",
+    "title": "Know this before the call",
+    "items": {
+      "scope": {
+        "q": "Do we have to automate the whole system at once?",
+        "a": "No. Work starts with one domain — the one with the largest effect. Other domains follow in later phases, based on the result."
+      },
+      "prices": {
+        "q": "Why are there no prices on the site?",
+        "a": "The tools output scope and timing, not a figure. Pricing is set in a short call, against the scope you've defined."
+      },
+      "time": {
+        "q": "How long does delivery take?",
+        "a": "Work is phased, and the first usable phase is delivered well before the full project completes."
+      },
+      "ownership": {
+        "q": "Who owns the code and access?",
+        "a": "Your organization: source, domain, hosting, and every key. Nothing stays dependent on us."
+      },
+      "iran": {
+        "q": "Does it run reliably from Iran?",
+        "a": "Yes. Infrastructure, fonts, and tools are chosen to stay fast and reachable from Iran."
+      }
+    }
+  },
+  "Cta": {
+    "title": "Ready for the next step?",
+    "subtitle": "One short call to set the scope and the first phase.",
+    "primary": "Request a call",
+    "secondary": "Define the scope"
+  },
   "Contact": {
     "eyebrow": "Contact",
-    "title": "A short call, no commitment",
-    "subtitle": "Leave your number and we'll reach out to map the scope with you.",
+    "title": "Request a review call",
+    "subtitle": "Leave your number and we'll be in touch to define the scope with you.",
     "formTitle": "Contact form",
     "fields": {
-      "name": {
-        "label": "Name",
-        "placeholder": "Your full name"
-      },
-      "phone": {
-        "label": "Mobile or WhatsApp",
-        "placeholder": "09121234567"
-      },
-      "sector": {
-        "label": "Sector"
-      },
-      "link": {
-        "label": "Site or profile link (optional)",
-        "placeholder": "instagram.com/yourshop"
-      }
+      "name": { "label": "Name", "placeholder": "Your full name" },
+      "phone": { "label": "Mobile or WhatsApp", "placeholder": "09121234567" },
+      "sector": { "label": "Sector" },
+      "link": { "label": "Site or profile link (optional)", "placeholder": "instagram.com/yourshop" }
     },
     "sectors": {
       "retail": "Retail & apparel",
@@ -638,33 +697,33 @@
       "other": "Other"
     },
     "sectorPlaceholder": "Choose one",
-    "submit": "Send",
+    "submit": "Send request",
     "sending": "Sending…",
-    "successTitle": "Got it",
-    "successBody": "We'll be in touch shortly. Meanwhile you can assemble your scope in the configurator so the call moves faster.",
-    "successCta": "Package configurator",
+    "successTitle": "Request received",
+    "successBody": "We'll be in touch shortly. Meanwhile you can define your scope so the call moves faster.",
+    "successCta": "Define the scope",
     "errors": {
       "name": "Enter your name (at least two characters).",
       "phone": "That mobile number isn't valid.",
-      "sector": "Pick a sector.",
-      "link": "That link isn't valid.",
-      "general": "Couldn't send. Try again in a moment.",
+      "sector": "Select a sector.",
+      "link": "That address isn't valid.",
+      "general": "Couldn't send. Please try again in a moment.",
       "rateLimited": "Too many submissions today. Please try again tomorrow."
     },
-    "privacyNote": "Used only to contact you about this request. It goes nowhere else.",
-    "noEndpointNote": "The form isn't connected to a delivery service yet; use the routes below for now."
+    "privacyNote": "Used only to contact you about this request.",
+    "noEndpointNote": "The form isn't connected to a delivery service yet; please use another contact route for now."
   },
   "NotFound": {
     "title": "This page wasn't found",
-    "body": "The link may be outdated or the address is wrong. Pick up from here.",
+    "body": "The address may have changed or been entered incorrectly.",
     "home": "Back to home"
   },
   "Footer": {
-    "tagline": "We build sales systems for real businesses.",
-    "colProduct": "Product",
+    "tagline": "Business system automation, across four domains.",
+    "colProduct": "Domains",
     "colExplore": "Explore",
     "colFramework": "Framework",
-    "servicesLink": "Services",
+    "servicesLink": "Domains",
     "toolsLink": "Tools",
     "workLink": "Work",
     "deliverablesLink": "Deliverables",
@@ -672,6 +731,6 @@
     "faqLink": "FAQ",
     "contactLink": "Contact",
     "rights": "© {year} AFA. All rights reserved.",
-    "note": "No prices on the site — scope and timeline here, pricing in the call."
+    "note": "Pricing is set in the call, against your defined scope."
   }
 }

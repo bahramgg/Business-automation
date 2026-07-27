@@ -1,39 +1,38 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
-import { Card } from '@/components/ui/card';
-import { SectionHeading } from '@/components/ui/section-heading';
-import { IconMessage, IconGrid, IconReturn } from '@/components/ui/icons';
 
-const cards = [
-  { id: 'unanswered', Icon: IconMessage },
-  { id: 'catalog', Icon: IconGrid },
-  { id: 'forgotten', Icon: IconReturn },
-] as const;
+const cards = ['scattered', 'manual', 'blind'] as const;
 
-// "The problem" — three concrete failure points (plan §4.2). Explanatory
-// cards: no gradient hairline, no tool chip.
+// Why automate at all — stated at the level of the business system, not one
+// department. Deliberately plain: no icons, no cards, just the argument.
 export function Problem() {
   const t = useTranslations('Problem');
 
   return (
     <section className="py-16 sm:py-20">
-      <SectionHeading eyebrow={t('eyebrow')} title={t('title')} />
-      <Container className="mt-10">
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {cards.map(({ id, Icon }) => (
-            <Card key={id}>
-              <span className="grid h-11 w-11 place-items-center rounded-field border border-border text-lilac">
-                <Icon />
-              </span>
-              <h3 className="mt-5 text-lg font-bold text-ink">
-                {t(`cards.${id}.title`)}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {t(`cards.${id}.body`)}
-              </p>
-            </Card>
-          ))}
+      <Container>
+        <div className="max-w-2xl">
+          <p className="text-xs uppercase tracking-wider text-dim">
+            {t('eyebrow')}
+          </p>
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+            {t('title')}
+          </h2>
+          <p className="mt-4 text-base leading-relaxed text-muted">{t('body')}</p>
         </div>
+
+        <dl className="mt-12 grid gap-10 sm:grid-cols-3">
+          {cards.map((id) => (
+            <div key={id}>
+              <dt className="text-base font-semibold text-ink">
+                {t(`cards.${id}.title`)}
+              </dt>
+              <dd className="mt-2 text-sm leading-relaxed text-muted">
+                {t(`cards.${id}.body`)}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </Container>
     </section>
   );
